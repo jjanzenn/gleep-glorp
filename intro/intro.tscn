@@ -1,0 +1,173 @@
+[gd_scene load_steps=8 format=3 uid="uid://bfjc5wnr856i0"]
+
+[ext_resource type="Texture2D" uid="uid://cxkdjrsjgxc1i" path="res://intro/IN 1952, GLEEP GLORP WAS SPOTTEN IN WYOMING CITY OKLAHOMA copy.jpg" id="1_s003a"]
+[ext_resource type="FontFile" uid="uid://bideg67mphojc" path="res://earthbound-menu-extended/earthbound-menu-extended.ttf" id="2_upjyk"]
+[ext_resource type="Texture2D" uid="uid://cfyq7dvepfqee" path="res://intro/squiggly.png" id="3_jy1dj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8qf2k"]
+line_spacing = 0.0
+font = ExtResource("2_upjyk")
+font_size = 11
+
+[sub_resource type="Animation" id="Animation_phrpn"]
+resource_name = "intro"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4.96667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_1mp6x"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dss23"]
+_data = {
+"RESET": SubResource("Animation_1mp6x"),
+"intro": SubResource("Animation_phrpn")
+}
+
+[node name="intro" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 259.0
+offset_bottom = 192.0
+color = Color(0, 0, 0, 1)
+
+[node name="spotten" type="Sprite2D" parent="."]
+position = Vector2(128, 79)
+scale = Vector2(0.178125, 0.178125)
+texture = ExtResource("1_s003a")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 154.0
+offset_right = 246.0
+offset_bottom = 186.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "IN 1952, GLEEP GLROP WAS SPOTTEN IN WYOMING
+CITY, OLKLAHOMA"
+label_settings = SubResource("LabelSettings_8qf2k")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_dss23")
+}
+autoplay = "intro"
+
+[node name="GLROP" type="Sprite2D" parent="."]
+position = Vector2(82, 165)
+texture = ExtResource("3_jy1dj")
+
+[node name="squiggly" type="Sprite2D" parent="GLROP"]
+position = Vector2(8, 0)
+texture = ExtResource("3_jy1dj")
+
+[node name="squiggly" type="Sprite2D" parent="GLROP/squiggly"]
+position = Vector2(8, 0)
+texture = ExtResource("3_jy1dj")
+
+[node name="squiggly" type="Sprite2D" parent="GLROP/squiggly/squiggly"]
+position = Vector2(8, 0)
+texture = ExtResource("3_jy1dj")
+
+[node name="squiggly" type="Sprite2D" parent="GLROP/squiggly/squiggly/squiggly"]
+visible = false
+position = Vector2(8, 0)
+texture = ExtResource("3_jy1dj")
+
+[node name="squiggly" type="Sprite2D" parent="GLROP/squiggly/squiggly/squiggly/squiggly"]
+position = Vector2(8, 0)
+texture = ExtResource("3_jy1dj")
+
+[node name="squiggly" type="Sprite2D" parent="GLROP/squiggly/squiggly/squiggly/squiggly/squiggly"]
+position = Vector2(8, 0)
+texture = ExtResource("3_jy1dj")
+
+[node name="OLKLAHOMA" type="Sprite2D" parent="."]
+position = Vector2(39, 181)
+texture = ExtResource("3_jy1dj")
+
+[node name="squiggly" type="Sprite2D" parent="OLKLAHOMA"]
+position = Vector2(8, 0)
+texture = ExtResource("3_jy1dj")
+
+[node name="squiggly" type="Sprite2D" parent="OLKLAHOMA/squiggly"]
+position = Vector2(8, 0)
+texture = ExtResource("3_jy1dj")
+
+[node name="squiggly" type="Sprite2D" parent="OLKLAHOMA/squiggly/squiggly"]
+position = Vector2(8, 0)
+texture = ExtResource("3_jy1dj")
+
+[node name="squiggly" type="Sprite2D" parent="OLKLAHOMA/squiggly/squiggly/squiggly"]
+position = Vector2(8, 0)
+texture = ExtResource("3_jy1dj")
+
+[node name="squiggly" type="Sprite2D" parent="OLKLAHOMA/squiggly/squiggly/squiggly/squiggly"]
+position = Vector2(8, 0)
+texture = ExtResource("3_jy1dj")
+
+[node name="squiggly" type="Sprite2D" parent="OLKLAHOMA/squiggly/squiggly/squiggly/squiggly/squiggly"]
+position = Vector2(8, 0)
+texture = ExtResource("3_jy1dj")
+
+[node name="SPOTTEN" type="Sprite2D" parent="."]
+position = Vector2(140, 165)
+texture = ExtResource("3_jy1dj")
+
+[node name="squiggly" type="Sprite2D" parent="SPOTTEN"]
+position = Vector2(8, 0)
+texture = ExtResource("3_jy1dj")
+
+[node name="squiggly" type="Sprite2D" parent="SPOTTEN/squiggly"]
+position = Vector2(8, 0)
+texture = ExtResource("3_jy1dj")
+
+[node name="squiggly" type="Sprite2D" parent="SPOTTEN/squiggly/squiggly"]
+position = Vector2(8, 0)
+texture = ExtResource("3_jy1dj")
+
+[node name="squiggly" type="Sprite2D" parent="SPOTTEN/squiggly/squiggly/squiggly"]
+position = Vector2(8, 0)
+texture = ExtResource("3_jy1dj")
+
+[node name="squiggly" type="Sprite2D" parent="SPOTTEN/squiggly/squiggly/squiggly/squiggly"]
+visible = false
+position = Vector2(8, 0)
+texture = ExtResource("3_jy1dj")
+
+[node name="squiggly" type="Sprite2D" parent="SPOTTEN/squiggly/squiggly/squiggly/squiggly/squiggly"]
+visible = false
+position = Vector2(8, 0)
+texture = ExtResource("3_jy1dj")
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_right = 275.0
+offset_bottom = 207.0
+color = Color(0, 0, 0, 1)
