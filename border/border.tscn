@@ -1,5 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://djwft0gtmmc"]
+[gd_scene load_steps=16 format=3 uid="uid://djwft0gtmmc"]
 
+[ext_resource type="Script" uid="uid://bjco6eaif743y" path="res://border/border.gd" id="1_4ddp2"]
 [ext_resource type="Material" uid="uid://dbphkv3ulf3r3" path="res://border/palette.tres" id="1_pj3cr"]
 [ext_resource type="Texture2D" uid="uid://c38ygy8h7o5s3" path="res://border/border.png" id="1_pvew4"]
 [ext_resource type="PackedScene" uid="uid://c175o6po8gcu2" path="res://microgames/petting/petting.tscn" id="2_4q5v0"]
@@ -8,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cird3ou5ywcl0" path="res://border/yoofo3.png" id="6_enkjd"]
 [ext_resource type="Texture2D" uid="uid://be56jjgcf263g" path="res://border/explod1.png" id="7_u3x0q"]
 [ext_resource type="Texture2D" uid="uid://cj8jo4bamusp4" path="res://border/explod2.png" id="8_4ddp2"]
+[ext_resource type="Texture2D" uid="uid://8uwpfeq2ui1w" path="res://microgames/petting/heart.png" id="9_u3x0q"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8e5xc"]
 animations = [{
@@ -22,59 +24,6 @@ animations = [{
 "name": &"default",
 "speed": 2.0
 }]
-
-[sub_resource type="Animation" id="Animation_t8cbv"]
-resource_name = "timer"
-length = 4.0
-step = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("yufo:position:x")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [302.0, 74.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("yufo:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("stationary_yufo:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("explod:visible")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
-}
 
 [sub_resource type="Animation" id="Animation_5qc61"]
 length = 0.001
@@ -127,6 +76,59 @@ tracks/3/keys = {
 "values": [true]
 }
 
+[sub_resource type="Animation" id="Animation_t8cbv"]
+resource_name = "timer"
+length = 4.5
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("yufo:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [302.0, 74.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("yufo:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("stationary_yufo:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("explod:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 4, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_n6usr"]
 _data = {
 &"RESET": SubResource("Animation_5qc61"),
@@ -149,6 +151,7 @@ animations = [{
 
 [node name="Border" type="Node2D"]
 texture_filter = 1
+script = ExtResource("1_4ddp2")
 
 [node name="Border" type="Sprite2D" parent="."]
 position = Vector2(173, 130)
@@ -191,3 +194,28 @@ position = Vector2(55, 245)
 sprite_frames = SubResource("SpriteFrames_texef")
 autoplay = "default"
 frame_progress = 0.55905145
+
+[node name="Lives" type="Node2D" parent="."]
+position = Vector2(93, 0)
+
+[node name="Heart 1" type="Sprite2D" parent="Lives"]
+position = Vector2(25.2, 20)
+scale = Vector2(2.016, 2)
+texture = ExtResource("9_u3x0q")
+
+[node name="Heart 2" type="Sprite2D" parent="Lives"]
+position = Vector2(62.20001, 20)
+scale = Vector2(2.016, 2)
+texture = ExtResource("9_u3x0q")
+
+[node name="Heart 3" type="Sprite2D" parent="Lives"]
+position = Vector2(99.20001, 20)
+scale = Vector2(2.016, 2)
+texture = ExtResource("9_u3x0q")
+
+[node name="Heart 4" type="Sprite2D" parent="Lives"]
+position = Vector2(137.20001, 20)
+scale = Vector2(2.016, 2)
+texture = ExtResource("9_u3x0q")
+
+[connection signal="animation_finished" from="timer/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

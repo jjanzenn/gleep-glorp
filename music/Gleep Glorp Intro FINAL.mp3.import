@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bsheslthnvkko"
+path="res://.godot/imported/Gleep Glorp Intro FINAL.mp3-c3f592357baf6434234237d746b49176.mp3str"
+
+[deps]
+
+source_file="res://music/Gleep Glorp Intro FINAL.mp3"
+dest_files=["res://.godot/imported/Gleep Glorp Intro FINAL.mp3-c3f592357baf6434234237d746b49176.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

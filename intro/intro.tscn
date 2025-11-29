@@ -4,7 +4,7 @@
 [ext_resource type="FontFile" uid="uid://bideg67mphojc" path="res://earthbound-menu-extended/earthbound-menu-extended.ttf" id="2_upjyk"]
 [ext_resource type="Texture2D" uid="uid://cfyq7dvepfqee" path="res://intro/squiggly.png" id="3_jy1dj"]
 [ext_resource type="Texture2D" uid="uid://degwesxnpcwkw" path="res://intro/IMG_6032 small.jpg" id="4_x0pcv"]
-[ext_resource type="AudioStream" uid="uid://dtlhhao1ywhbx" path="res://music/Gleep Glorp Intro faster.mp3" id="5_vyos2"]
+[ext_resource type="AudioStream" uid="uid://bsheslthnvkko" path="res://music/Gleep Glorp Intro FINAL.mp3" id="5_vyos2"]
 
 [sub_resource type="Animation" id="Animation_1mp6x"]
 length = 0.001
