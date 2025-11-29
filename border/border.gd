@@ -10,9 +10,8 @@ func _process(_delta: float) -> void:
 	pass
 
 
-func _on_microgame_lose() -> void:
-	print("Fail :(")
-
-
-func _on_microgame_win() -> void:
-	print("Win :)")
+func _on_animation_player_animation_finished(_anim_name: StringName) -> void:
+	if $Microgame/root.won:
+		print("win :))")
+	else:
+		print("fail :((")

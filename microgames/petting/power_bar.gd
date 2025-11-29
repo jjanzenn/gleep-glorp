@@ -24,9 +24,9 @@ func _process(delta: float) -> void:
 	elif Input.is_action_just_released("action"):
 		done = true
 		if state == 4:
-			win.emit()
+			won = true
 		else:
-			lose.emit()
+			won = false
 		
 	if state == 0:
 		$"power-bar/stage-0".visible = true
