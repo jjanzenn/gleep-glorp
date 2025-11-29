@@ -19,7 +19,7 @@ var winner_number_1
 var winner_number_2
 var winner_number_3 = 1
 
-var will_win = true
+var will_win = false
 
 var player_card_1
 var player_card_2
@@ -116,6 +116,8 @@ func _process(delta: float) -> void:
 	if elapsed > animation_time and total_elapsed < animation_stop:
 		$"background-2".visible = not $"background-2".visible
 		elapsed = 0
+	if total_elapsed > animation_stop:
+		$"background-2".visible = false
 	if not done:
 		if Input.is_action_pressed("action"):
 			spawn_card(player_card_3, card_3x, player_y, $"player-cards")
