@@ -1,4 +1,4 @@
-extends Node2D
+extends Microgame
 
 var rng = RandomNumberGenerator.new()
 
@@ -29,9 +29,12 @@ var dealer_card_2
 var dealer_card_3
 
 var done = false
+var done_for_real = false
 
 var elapsed = 0
+var total_elapsed = 0
 var animation_time = 0.2
+var animation_stop = 1.75
 
 func spawn_card(value, x, y, parent) -> void:
 	var sprite = Sprite2D.new()
@@ -109,16 +112,27 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	elapsed += delta
-	if elapsed > animation_time:
+	total_elapsed += delta
+	if elapsed > animation_time and total_elapsed < animation_stop:
 		$"background-2".visible = not $"background-2".visible
 		elapsed = 0
 	if not done:
 		if Input.is_action_pressed("action"):
 			spawn_card(player_card_3, card_3x, player_y, $"player-cards")
-			spawn_card(dealer_card_2, card_2x, dealer_y, $"scalar-cards")
-			spawn_card(dealer_card_3, card_3x, dealer_y, $"scalar-cards")
 			done = true
+			total_elapsed = 0
 		if Input.is_action_pressed("cancel"):
-			spawn_card(dealer_card_2, card_2x, dealer_y, $"scalar-cards")
-			spawn_card(dealer_card_3, card_3x, dealer_y, $"scalar-cards")
 			done = true
+			total_elapsed = 0
+	if done:
+		won = will_win
+		spawn_card(dealer_card_2, card_2x, dealer_y, $"scalar-cards")
+		spawn_card(dealer_card_3, card_3x, dealer_y, $"scalar-cards")
+		$instructions.visible = false
+		if not $AudioStreamPlayer.playing and not done_for_real:
+			$AudioStreamPlayer.play()
+			done_for_real = true
+		if will_win:
+			$"win-text".visible = true
+		else:
+			$"lose-text".visible = true
