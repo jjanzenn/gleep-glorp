@@ -4,7 +4,7 @@
 [ext_resource type="FontFile" uid="uid://bideg67mphojc" path="res://earthbound-menu-extended/earthbound-menu-extended.ttf" id="2_upjyk"]
 [ext_resource type="Texture2D" uid="uid://cfyq7dvepfqee" path="res://intro/squiggly.png" id="3_jy1dj"]
 [ext_resource type="Texture2D" uid="uid://degwesxnpcwkw" path="res://intro/IMG_6032 small.jpg" id="4_x0pcv"]
-[ext_resource type="AudioStream" uid="uid://cg75k5jwo7axv" path="res://music/Gleep Glorp Intro.mp3" id="5_vyos2"]
+[ext_resource type="AudioStream" uid="uid://dtlhhao1ywhbx" path="res://music/Gleep Glorp Intro faster.mp3" id="5_vyos2"]
 
 [sub_resource type="Animation" id="Animation_1mp6x"]
 length = 0.001
@@ -120,12 +120,12 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0, 12, 14, 14.08, 15.11, 15.33),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": ["Now, in the distanct future of 201X, gleep glorps 
-live among humans.", "Now, in the distanct future of 201X, gleep glorps 
-live among humans.", "Now, in the distanct future of 201X, gleep glorps 
-live among us humans.", "Now, in the distanct future of 201X, gleep glorps 
-live among humans.", "Now, in the distanct future of 201X, gleep glorps 
-live among us humans.", "Now, in the distanct future of 201X, gleep glorps 
+"values": ["Now, in the distanct future of 199X, gleep glorps 
+live among humans.", "Now, in the distanct future of 199X, gleep glorps 
+live among humans.", "Now, in the distanct future of 199X, gleep glorps 
+live among us humans.", "Now, in the distanct future of 199X, gleep glorps 
+live among humans.", "Now, in the distanct future of 199X, gleep glorps 
+live among us humans.", "Now, in the distanct future of 199X, gleep glorps 
 live among humans."]
 }
 tracks/4/type = "value"
@@ -200,7 +200,7 @@ grow_horizontal = 2
 grow_vertical = 0
 pivot_offset = Vector2(118, 16)
 text = "IN 1952, GLEEP GLROP WAS SPOTTEN IN WYOMING
-CITY, OLKLAHOMA"
+CITY, OLKLAHOMA."
 label_settings = SubResource("LabelSettings_8qf2k")
 
 [node name="GLROP" type="Sprite2D" parent="slide1/Label"]
@@ -233,7 +233,7 @@ position = Vector2(8, 0)
 texture = ExtResource("3_jy1dj")
 
 [node name="OLKLAHOMA" type="Sprite2D" parent="slide1/Label"]
-position = Vector2(29, 27)
+position = Vector2(186, 11)
 texture = ExtResource("3_jy1dj")
 
 [node name="squiggly" type="Sprite2D" parent="slide1/Label/OLKLAHOMA"]
@@ -253,6 +253,7 @@ position = Vector2(8, 0)
 texture = ExtResource("3_jy1dj")
 
 [node name="squiggly" type="Sprite2D" parent="slide1/Label/OLKLAHOMA/squiggly/squiggly/squiggly/squiggly"]
+visible = false
 position = Vector2(8, 0)
 texture = ExtResource("3_jy1dj")
 
