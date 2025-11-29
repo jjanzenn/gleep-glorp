@@ -1,6 +1,7 @@
 extends Node2D
 
 var lives: int = 4
+var score: int = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -15,6 +16,8 @@ func _process(_delta: float) -> void:
 func _on_animation_player_animation_finished(_anim_name: StringName) -> void:
 	if $Microgame/root.won:
 		print("win :))")
+		score += 1
+		$Score.text = str(score)
 	else:
 		print("fail :((")
 		match lives:

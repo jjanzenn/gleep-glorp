@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://djwft0gtmmc"]
+[gd_scene load_steps=18 format=3 uid="uid://djwft0gtmmc"]
 
 [ext_resource type="Script" uid="uid://bjco6eaif743y" path="res://border/border.gd" id="1_4ddp2"]
 [ext_resource type="Material" uid="uid://dbphkv3ulf3r3" path="res://border/palette.tres" id="1_pj3cr"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://be56jjgcf263g" path="res://border/explod1.png" id="7_u3x0q"]
 [ext_resource type="Texture2D" uid="uid://cj8jo4bamusp4" path="res://border/explod2.png" id="8_4ddp2"]
 [ext_resource type="PackedScene" uid="uid://cqm7aajykbg28" path="res://border/life.tscn" id="10_t8cbv"]
+[ext_resource type="FontFile" uid="uid://bideg67mphojc" path="res://earthbound-menu-extended/earthbound-menu-extended.ttf" id="11_t8cbv"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8e5xc"]
 animations = [{
@@ -149,6 +150,11 @@ animations = [{
 "speed": 6.0
 }]
 
+[sub_resource type="LabelSettings" id="LabelSettings_5qc61"]
+font = ExtResource("11_t8cbv")
+font_size = 11
+font_color = Color(0, 0, 0, 1)
+
 [node name="Border" type="Node2D"]
 texture_filter = 1
 script = ExtResource("1_4ddp2")
@@ -196,7 +202,7 @@ autoplay = "default"
 frame_progress = 0.55905145
 
 [node name="Lives" type="Node2D" parent="."]
-position = Vector2(30, 0)
+position = Vector2(39, 0)
 
 [node name="Life 1" parent="Lives" instance=ExtResource("10_t8cbv")]
 
@@ -208,5 +214,15 @@ position = Vector2(74, 0)
 
 [node name="Life 4" parent="Lives" instance=ExtResource("10_t8cbv")]
 position = Vector2(112, 0)
+
+[node name="Score" type="Label" parent="."]
+offset_left = 278.0
+offset_top = 2.0
+offset_right = 289.0
+offset_bottom = 18.0
+scale = Vector2(2, 2)
+text = "0"
+label_settings = SubResource("LabelSettings_5qc61")
+horizontal_alignment = 2
 
 [connection signal="animation_finished" from="timer/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
