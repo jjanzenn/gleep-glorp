@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmryy17u7qy32"
-path="res://.godot/imported/power-bar-stage-1.png-97d65b985c96d007e63702a26d5ecde1.ctex"
+uid="uid://dy8v1vt6vtpcx"
+path="res://.godot/imported/tv.png-cd493b2241d3b961d4fd2bf9459d16d4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microgames/petting/power-bar-stage-1.png"
-dest_files=["res://.godot/imported/power-bar-stage-1.png-97d65b985c96d007e63702a26d5ecde1.ctex"]
+source_file="res://microgames/fishing/tv.png"
+dest_files=["res://.godot/imported/tv.png-cd493b2241d3b961d4fd2bf9459d16d4.ctex"]
 
 [params]
 

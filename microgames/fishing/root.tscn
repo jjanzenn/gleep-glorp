@@ -1,0 +1,48 @@
+[gd_scene load_steps=9 format=3 uid="uid://c6d4ldf4vltqp"]
+
+[ext_resource type="Script" uid="uid://w7mwgkx5wyqs" path="res://microgames/fishing/fishin.gd" id="1_4mnno"]
+[ext_resource type="Texture2D" uid="uid://cwb3kk6813qqs" path="res://microgames/fishing/tv-screen-1.png" id="1_b5fk2"]
+[ext_resource type="Texture2D" uid="uid://dy8v1vt6vtpcx" path="res://microgames/fishing/tv.png" id="1_nu307"]
+[ext_resource type="Texture2D" uid="uid://u5n0whjrqfap" path="res://microgames/fishing/tv-screen-2.png" id="2_5oy73"]
+[ext_resource type="Texture2D" uid="uid://bwqn6euu2vt22" path="res://microgames/fishing/tv-screen-3.png" id="3_4mnno"]
+[ext_resource type="Texture2D" uid="uid://bcef7sj35phmn" path="res://microgames/fishing/tv-paws.png" id="5_im46w"]
+[ext_resource type="FontFile" uid="uid://bideg67mphojc" path="res://earthbound-menu-extended/earthbound-menu-extended.ttf" id="7_im46w"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_01i7h"]
+font = ExtResource("7_im46w")
+font_size = 22
+font_color = Color(0, 0, 0, 1)
+
+[node name="root" type="Node2D"]
+script = ExtResource("1_4mnno")
+
+[node name="screen-idle" type="Sprite2D" parent="."]
+position = Vector2(128, 96)
+texture = ExtResource("1_b5fk2")
+
+[node name="screen-active" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(128, 96)
+texture = ExtResource("2_5oy73")
+
+[node name="screen-success" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(128, 96)
+texture = ExtResource("3_4mnno")
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(128, 96)
+texture = ExtResource("1_nu307")
+
+[node name="paws" type="Sprite2D" parent="."]
+position = Vector2(128, 96)
+texture = ExtResource("5_im46w")
+
+[node name="instructions" type="Label" parent="."]
+visible = false
+offset_left = 102.0
+offset_top = 33.0
+offset_right = 186.0
+offset_bottom = 65.0
+text = "Mash A!!!"
+label_settings = SubResource("LabelSettings_01i7h")
