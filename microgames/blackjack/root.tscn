@@ -1,15 +1,43 @@
-[gd_scene load_steps=3 format=3 uid="uid://dl26epjppslhi"]
+[gd_scene load_steps=7 format=3 uid="uid://dl26epjppslhi"]
 
 [ext_resource type="Script" uid="uid://be7i7gfesj617" path="res://microgames/blackjack/blackjack.gd" id="1_536fq"]
 [ext_resource type="Texture2D" uid="uid://cf2wpnhqols5l" path="res://microgames/blackjack/background.png" id="1_c03nn"]
+[ext_resource type="Texture2D" uid="uid://x4o32n6hsmk4" path="res://microgames/blackjack/blackjack-background-mouth-open.png" id="3_4cxp5"]
+[ext_resource type="Texture2D" uid="uid://bs55acvyn74sy" path="res://microgames/blackjack/text-bubble.png" id="4_gxpfr"]
+[ext_resource type="FontFile" uid="uid://bideg67mphojc" path="res://earthbound-menu-extended/earthbound-menu-extended.ttf" id="5_00ieg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vu321"]
+line_spacing = -2.0
+font = ExtResource("5_00ieg")
+font_size = 11
+font_color = Color(0, 0, 0, 1)
 
 [node name="root" type="Node2D"]
+texture_filter = 3
 script = ExtResource("1_536fq")
 
 [node name="background" type="Sprite2D" parent="."]
 position = Vector2(128, 96)
 texture = ExtResource("1_c03nn")
 
+[node name="background-2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(128, 96)
+texture = ExtResource("3_4cxp5")
+
 [node name="scalar-cards" type="Node2D" parent="."]
 
 [node name="player-cards" type="Node2D" parent="."]
+
+[node name="text-bubble" type="Sprite2D" parent="."]
+position = Vector2(208, 34)
+texture = ExtResource("4_gxpfr")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 183.0
+offset_top = 22.0
+offset_right = 317.0
+offset_bottom = 97.0
+text = "Press A to hit
+or B to hold"
+label_settings = SubResource("LabelSettings_vu321")

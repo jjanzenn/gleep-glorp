@@ -18,18 +18,27 @@ var loser_sum
 var winner_number_1
 var winner_number_2
 var winner_number_3 = 1
-var wn_1_score
-var wn_2_score
-var wn_3_score = 1
 
 var will_win = true
+
+var player_card_1
+var player_card_2
+var player_card_3
+var dealer_card_1
+var dealer_card_2
+var dealer_card_3
+
+var done = false
+
+var elapsed = 0
+var animation_time = 0.2
 
 func spawn_card(value, x, y, parent) -> void:
 	var sprite = Sprite2D.new()
 	parent.add_child(sprite)
 	match value:
 		1:
-			sprite.texture = load("res://microgames/blackjack/card-1.png")
+			sprite.texture = load("res://microgames/blackjack/card-a.png")
 		2:
 			sprite.texture = load("res://microgames/blackjack/card-2.png")
 		3:
@@ -66,26 +75,50 @@ func _ready() -> void:
 	loser_number_3 = rng.randi_range(2, 6)
 	loser_sum = loser_number_1 + loser_number_2 + loser_number_3
 	
-	winner_number_1 = rng.randi_range(2, 13)
+	winner_number_1 = rng.randi_range(7, 13)
+	var wn_1_score = winner_number_1
 	if winner_number_1 >= 10:
 		wn_1_score = 10
-	else:
-		wn_1_score = winner_number_1
 	winner_number_2 = loser_sum - wn_1_score
-	if winner_number_2 >= 10:
-		wn_2_score = 10
-	else:
-		wn_2_score = winner_number_2
+	if winner_number_2 < 1:
+		winner_number_2 = 1
 		
 	if will_win:
-		spawn_card(winner_number_1, card_1x, player_y, $"player-cards")
-		spawn_card(winner_number_2, card_2x, player_y, $"player-cards")
-		spawn_card(-1, card_3x, player_y, $"player-cards")
+		player_card_1 = winner_number_1
+		player_card_2 = winner_number_2
+		player_card_3 = winner_number_3
+		dealer_card_1 = loser_number_1
+		dealer_card_2 = loser_number_2
+		dealer_card_3 = loser_number_3
 	else:
-		spawn_card(loser_number_1, card_1x, player_y, $"player-cards")
-		spawn_card(loser_number_2, card_2x, player_y, $"player-cards")
-		spawn_card(-1, card_3x, player_y, $"player-cards")
+		player_card_1 = loser_number_1
+		player_card_2 = loser_number_2
+		player_card_3 = loser_number_3
+		dealer_card_1 = winner_number_1
+		dealer_card_2 = winner_number_2
+		dealer_card_3 = winner_number_3
+		
+	spawn_card(player_card_1, card_1x, player_y, $"player-cards")
+	spawn_card(player_card_2, card_2x, player_y, $"player-cards")
+	spawn_card(-1, card_3x, player_y, $"player-cards")
+		
+	spawn_card(dealer_card_1, card_1x, dealer_y, $"scalar-cards")
+	spawn_card(-1, card_2x, dealer_y, $"scalar-cards")
+	spawn_card(-1, card_3x, dealer_y, $"scalar-cards")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	elapsed += delta
+	if elapsed > animation_time:
+		$"background-2".visible = not $"background-2".visible
+		elapsed = 0
+	if not done:
+		if Input.is_action_pressed("action"):
+			spawn_card(player_card_3, card_3x, player_y, $"player-cards")
+			spawn_card(dealer_card_2, card_2x, dealer_y, $"scalar-cards")
+			spawn_card(dealer_card_3, card_3x, dealer_y, $"scalar-cards")
+			done = true
+		if Input.is_action_pressed("cancel"):
+			spawn_card(dealer_card_2, card_2x, dealer_y, $"scalar-cards")
+			spawn_card(dealer_card_3, card_3x, dealer_y, $"scalar-cards")
+			done = true
