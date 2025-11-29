@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://djwft0gtmmc"]
+
+[ext_resource type="Texture2D" uid="uid://c38ygy8h7o5s3" path="res://border/border.png" id="1_pvew4"]
+[ext_resource type="PackedScene" uid="uid://c175o6po8gcu2" path="res://microgames/petting/petting.tscn" id="2_4q5v0"]
+
+[node name="Border" type="Node2D"]
+
+[node name="Border" type="Sprite2D" parent="."]
+position = Vector2(173, 130)
+texture = ExtResource("1_pvew4")
+
+[node name="Microgame" type="Node2D" parent="."]
+
+[node name="root" parent="Microgame" instance=ExtResource("2_4q5v0")]
+position = Vector2(45, 34)
