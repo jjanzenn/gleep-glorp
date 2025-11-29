@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=3 uid="uid://c175o6po8gcu2"]
+
+[ext_resource type="Texture2D" uid="uid://e466ws1jkuva" path="res://icon.svg" id="1_r6aqp"]
+[ext_resource type="Script" uid="uid://s1sj1tphbrhf" path="res://microgames/petting/power_bar.gd" id="2_4h6ry"]
+[ext_resource type="Texture2D" uid="uid://bapo7527if85k" path="res://microgames/petting/power-bar-stage-1.png" id="2_om01a"]
+[ext_resource type="Texture2D" uid="uid://bg4usbt5wpa0a" path="res://microgames/petting/power-bar0.png" id="3_edjr7"]
+[ext_resource type="Texture2D" uid="uid://3xllv71f86eb" path="res://microgames/petting/power-bar-stage-2.png" id="3_om01a"]
+[ext_resource type="Texture2D" uid="uid://c21ib5ejdritf" path="res://microgames/petting/power-bar-stage-3.png" id="4_is25i"]
+[ext_resource type="Texture2D" uid="uid://gaqrcnwogwso" path="res://microgames/petting/power-bar-stage-4.png" id="5_0h2tf"]
+
+[node name="root" type="Node2D"]
+script = ExtResource("2_4h6ry")
+
+[node name="background" type="ColorRect" parent="."]
+offset_right = 261.0
+offset_bottom = 198.0
+color = Color(0, 0, 0, 1)
+
+[node name="gleep-glorp" type="Sprite2D" parent="."]
+position = Vector2(89, 126)
+texture = ExtResource("1_r6aqp")
+
+[node name="power-bar" type="Node2D" parent="."]
+
+[node name="stage-0" type="Sprite2D" parent="power-bar"]
+position = Vector2(228, 53)
+texture = ExtResource("3_edjr7")
+
+[node name="stage-1" type="Sprite2D" parent="power-bar"]
+visible = false
+position = Vector2(228, 53)
+texture = ExtResource("2_om01a")
+
+[node name="stage-2" type="Sprite2D" parent="power-bar"]
+visible = false
+position = Vector2(228, 53)
+texture = ExtResource("3_om01a")
+
+[node name="stage-3" type="Sprite2D" parent="power-bar"]
+visible = false
+position = Vector2(228, 53)
+texture = ExtResource("4_is25i")
+
+[node name="stage-4" type="Sprite2D" parent="power-bar"]
+visible = false
+position = Vector2(228, 53)
+texture = ExtResource("5_0h2tf")
