@@ -63,4 +63,9 @@ func _process(delta: float) -> void:
 		state += direction
 		time_total = 0
 	elif done and not really_done:
+		$"gleep-glorp".visible = false
+		if state == 4:
+			$"gleep-glorp-happy".visible = true
+		else:
+			$"gleep-glorp-angry".visible = true
 		really_done = true
