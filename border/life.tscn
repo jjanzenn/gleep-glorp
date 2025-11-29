@@ -1,0 +1,99 @@
+[gd_scene load_steps=8 format=3 uid="uid://cqm7aajykbg28"]
+
+[ext_resource type="Texture2D" uid="uid://8uwpfeq2ui1w" path="res://microgames/petting/heart.png" id="1_s50ty"]
+[ext_resource type="Texture2D" uid="uid://be56jjgcf263g" path="res://border/explod1.png" id="2_xa2m1"]
+[ext_resource type="Texture2D" uid="uid://cj8jo4bamusp4" path="res://border/explod2.png" id="3_v1hi1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_texef"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_xa2m1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_v1hi1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="Animation" id="Animation_n6usr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Heart:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("explod:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_4ddp2"]
+resource_name = "explod"
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Heart:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("explod:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_texef"]
+_data = {
+&"RESET": SubResource("Animation_n6usr"),
+&"explod": SubResource("Animation_4ddp2")
+}
+
+[node name="Life 1" type="Node2D"]
+
+[node name="Heart" type="Sprite2D" parent="."]
+position = Vector2(25.199997, 20)
+scale = Vector2(2.016, 2)
+texture = ExtResource("1_s50ty")
+
+[node name="explod" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(24, 18)
+sprite_frames = SubResource("SpriteFrames_texef")
+autoplay = "default"
+frame_progress = 0.55905145
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_texef")
+}

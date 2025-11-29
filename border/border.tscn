@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cird3ou5ywcl0" path="res://border/yoofo3.png" id="6_enkjd"]
 [ext_resource type="Texture2D" uid="uid://be56jjgcf263g" path="res://border/explod1.png" id="7_u3x0q"]
 [ext_resource type="Texture2D" uid="uid://cj8jo4bamusp4" path="res://border/explod2.png" id="8_4ddp2"]
-[ext_resource type="Texture2D" uid="uid://8uwpfeq2ui1w" path="res://microgames/petting/heart.png" id="9_u3x0q"]
+[ext_resource type="PackedScene" uid="uid://cqm7aajykbg28" path="res://border/life.tscn" id="10_t8cbv"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8e5xc"]
 animations = [{
@@ -196,26 +196,17 @@ autoplay = "default"
 frame_progress = 0.55905145
 
 [node name="Lives" type="Node2D" parent="."]
-position = Vector2(93, 0)
+position = Vector2(30, 0)
 
-[node name="Heart 1" type="Sprite2D" parent="Lives"]
-position = Vector2(25.2, 20)
-scale = Vector2(2.016, 2)
-texture = ExtResource("9_u3x0q")
+[node name="Life 1" parent="Lives" instance=ExtResource("10_t8cbv")]
 
-[node name="Heart 2" type="Sprite2D" parent="Lives"]
-position = Vector2(62.20001, 20)
-scale = Vector2(2.016, 2)
-texture = ExtResource("9_u3x0q")
+[node name="Life 2" parent="Lives" instance=ExtResource("10_t8cbv")]
+position = Vector2(37, 0)
 
-[node name="Heart 3" type="Sprite2D" parent="Lives"]
-position = Vector2(99.20001, 20)
-scale = Vector2(2.016, 2)
-texture = ExtResource("9_u3x0q")
+[node name="Life 3" parent="Lives" instance=ExtResource("10_t8cbv")]
+position = Vector2(74, 0)
 
-[node name="Heart 4" type="Sprite2D" parent="Lives"]
-position = Vector2(137.20001, 20)
-scale = Vector2(2.016, 2)
-texture = ExtResource("9_u3x0q")
+[node name="Life 4" parent="Lives" instance=ExtResource("10_t8cbv")]
+position = Vector2(112, 0)
 
 [connection signal="animation_finished" from="timer/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
