@@ -43,6 +43,19 @@ tracks/2/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("slide2/Label:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Now, in the distanct future of 201X, gleep glorps 
+live among humans."]
+}
 
 [sub_resource type="Animation" id="Animation_phrpn"]
 resource_name = "intro"
@@ -83,6 +96,24 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("slide2/Label:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 12, 14, 14.08, 15.11, 15.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["Now, in the distanct future of 201X, gleep glorps 
+live among humans.", "Now, in the distanct future of 201X, gleep glorps 
+live among humans.", "Now, in the distanct future of 201X, gleep glorps 
+live among us humans.", "Now, in the distanct future of 201X, gleep glorps 
+live among humans.", "Now, in the distanct future of 201X, gleep glorps 
+live among us humans.", "Now, in the distanct future of 201X, gleep glorps 
+live among humans."]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dss23"]
