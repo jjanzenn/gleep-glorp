@@ -9,6 +9,8 @@ var done = false
 var really_done = false
 var running = false
 
+var animation_frame_time = 0.15
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -65,7 +67,15 @@ func _process(delta: float) -> void:
 	elif done and not really_done:
 		$"gleep-glorp".visible = false
 		if state == 4:
-			$"gleep-glorp-happy".visible = true
+			$happy.visible = true
 		else:
-			$"gleep-glorp-angry".visible = true
+			$angy.visible = true
 		really_done = true
+	elif time_total > animation_frame_time and state == 4 and really_done:
+		$"happy/frame-1".visible = not $"happy/frame-1".visible
+		$"happy/frame-2".visible = not $"happy/frame-2".visible
+		time_total = 0
+	elif time_total > animation_frame_time and really_done:
+		$"angy/frame-1".visible = not $"angy/frame-1".visible
+		$"angy/frame-2".visible = not $"angy/frame-2".visible
+		time_total = 0
