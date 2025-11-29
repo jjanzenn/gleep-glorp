@@ -20,6 +20,18 @@ color = Color(0, 0, 0, 1)
 position = Vector2(89, 126)
 texture = ExtResource("1_r6aqp")
 
+[node name="gleep-glorp-happy" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(0, 1, 0, 1)
+position = Vector2(89, 126)
+texture = ExtResource("1_r6aqp")
+
+[node name="gleep-glorp-angry" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(1, 0, 0, 1)
+position = Vector2(89, 126)
+texture = ExtResource("1_r6aqp")
+
 [node name="power-bar" type="Node2D" parent="."]
 
 [node name="stage-0" type="Sprite2D" parent="power-bar"]
