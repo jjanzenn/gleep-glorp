@@ -56,6 +56,18 @@ tracks/3/keys = {
 "values": ["Now, in the distanct future of 201X, gleep glorps 
 live among humans."]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("curtain:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_phrpn"]
 resource_name = "intro"
@@ -80,10 +92,10 @@ tracks/1/path = NodePath("slide1:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(11),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 11),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [false]
+"values": [true, false]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -92,10 +104,10 @@ tracks/2/path = NodePath("slide2:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(11),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 11),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [true]
+"values": [false, true]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -115,11 +127,23 @@ live among humans.", "Now, in the distanct future of 201X, gleep glorps
 live among us humans.", "Now, in the distanct future of 201X, gleep glorps 
 live among humans."]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("curtain:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dss23"]
 _data = {
-"RESET": SubResource("Animation_1mp6x"),
-"intro": SubResource("Animation_phrpn")
+&"RESET": SubResource("Animation_1mp6x"),
+&"intro": SubResource("Animation_phrpn")
 }
 
 [sub_resource type="LabelSettings" id="LabelSettings_8qf2k"]
@@ -131,7 +155,7 @@ font_size = 11
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_dss23")
+&"": SubResource("AnimationLibrary_dss23")
 }
 autoplay = "intro"
 
@@ -364,6 +388,7 @@ position = Vector2(8, 0)
 texture = ExtResource("3_jy1dj")
 
 [node name="curtain" type="ColorRect" parent="."]
+visible = false
 offset_right = 256.0
 offset_bottom = 192.0
 color = Color(0, 0, 0, 1)
