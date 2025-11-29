@@ -1,10 +1,154 @@
-[gd_scene load_steps=4 format=3 uid="uid://djwft0gtmmc"]
+[gd_scene load_steps=14 format=3 uid="uid://djwft0gtmmc"]
 
 [ext_resource type="Material" uid="uid://dbphkv3ulf3r3" path="res://border/palette.tres" id="1_pj3cr"]
 [ext_resource type="Texture2D" uid="uid://c38ygy8h7o5s3" path="res://border/border.png" id="1_pvew4"]
 [ext_resource type="PackedScene" uid="uid://c175o6po8gcu2" path="res://microgames/petting/petting.tscn" id="2_4q5v0"]
+[ext_resource type="Texture2D" uid="uid://dfnp7l0s6ihc4" path="res://border/yoofo1.png" id="4_rqwb3"]
+[ext_resource type="Texture2D" uid="uid://bo7ps0rmftp8m" path="res://border/yoofo2.png" id="5_6dhu7"]
+[ext_resource type="Texture2D" uid="uid://cird3ou5ywcl0" path="res://border/yoofo3.png" id="6_enkjd"]
+[ext_resource type="Texture2D" uid="uid://be56jjgcf263g" path="res://border/explod1.png" id="7_u3x0q"]
+[ext_resource type="Texture2D" uid="uid://cj8jo4bamusp4" path="res://border/explod2.png" id="8_4ddp2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8e5xc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_rqwb3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_6dhu7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="Animation" id="Animation_t8cbv"]
+resource_name = "timer"
+length = 4.0
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("yufo:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [302.0, 74.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("yufo:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("stationary_yufo:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("explod:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_5qc61"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("yufo:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [302.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("yufo:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("stationary_yufo:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("explod:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n6usr"]
+_data = {
+&"RESET": SubResource("Animation_5qc61"),
+&"timer": SubResource("Animation_t8cbv")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_texef"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_u3x0q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_4ddp2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
 
 [node name="Border" type="Node2D"]
+texture_filter = 1
 
 [node name="Border" type="Sprite2D" parent="."]
 position = Vector2(173, 130)
@@ -21,3 +165,29 @@ position = Vector2(45, 34)
 material = ExtResource("1_pj3cr")
 offset_right = 346.0
 offset_bottom = 260.0
+
+[node name="timer" type="Node2D" parent="."]
+
+[node name="yufo" type="AnimatedSprite2D" parent="timer"]
+position = Vector2(302, 243)
+rotation = 3.1415925
+scale = Vector2(1, -1)
+sprite_frames = SubResource("SpriteFrames_8e5xc")
+autoplay = "default"
+frame_progress = 0.80973047
+
+[node name="stationary_yufo" type="Sprite2D" parent="timer"]
+position = Vector2(45, 242)
+texture = ExtResource("6_enkjd")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="timer"]
+libraries = {
+&"": SubResource("AnimationLibrary_n6usr")
+}
+autoplay = "timer"
+
+[node name="explod" type="AnimatedSprite2D" parent="timer"]
+position = Vector2(55, 245)
+sprite_frames = SubResource("SpriteFrames_texef")
+autoplay = "default"
+frame_progress = 0.84507436
