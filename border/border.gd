@@ -15,11 +15,9 @@ func _process(_delta: float) -> void:
 
 func _on_animation_player_animation_finished(_anim_name: StringName) -> void:
 	if $Microgame/root.won:
-		print("win :))")
 		score += 1
 		$Score.text = str(score)
 	else:
-		print("fail :((")
 		match lives:
 			1:
 				$"Lives/Life 1/AnimationPlayer".play("explod")
