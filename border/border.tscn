@@ -174,7 +174,7 @@ rotation = 3.1415925
 scale = Vector2(1, -1)
 sprite_frames = SubResource("SpriteFrames_8e5xc")
 autoplay = "default"
-frame_progress = 0.80973047
+frame_progress = 0.7143913
 
 [node name="stationary_yufo" type="Sprite2D" parent="timer"]
 position = Vector2(45, 242)
@@ -190,4 +190,4 @@ autoplay = "timer"
 position = Vector2(55, 245)
 sprite_frames = SubResource("SpriteFrames_texef")
 autoplay = "default"
-frame_progress = 0.84507436
+frame_progress = 0.55905145

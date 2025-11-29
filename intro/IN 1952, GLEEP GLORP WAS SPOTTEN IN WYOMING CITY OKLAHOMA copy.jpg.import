@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://cxkdjrsjgxc1i"
+path="res://.godot/imported/IN 1952, GLEEP GLORP WAS SPOTTEN IN WYOMING CITY OKLAHOMA copy.jpg-632d85193d72ab3bf9598930dd2a327e.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://intro/IN 1952, GLEEP GLORP WAS SPOTTEN IN WYOMING CITY OKLAHOMA copy.jpg"
+dest_files=["res://.godot/imported/IN 1952, GLEEP GLORP WAS SPOTTEN IN WYOMING CITY OKLAHOMA copy.jpg-632d85193d72ab3bf9598930dd2a327e.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
