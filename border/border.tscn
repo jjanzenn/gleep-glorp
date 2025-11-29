@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://djwft0gtmmc"]
+[gd_scene load_steps=20 format=3 uid="uid://djwft0gtmmc"]
 
 [ext_resource type="Script" uid="uid://bjco6eaif743y" path="res://border/border.gd" id="1_4ddp2"]
 [ext_resource type="Material" uid="uid://dbphkv3ulf3r3" path="res://border/palette.tres" id="1_pj3cr"]
@@ -155,6 +155,14 @@ font = ExtResource("11_t8cbv")
 font_size = 11
 font_color = Color(0, 0, 0, 1)
 
+[sub_resource type="Animation" id="Animation_n6usr"]
+resource_name = "win"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_texef"]
+_data = {
+&"win": SubResource("Animation_n6usr")
+}
+
 [node name="Border" type="Node2D"]
 texture_filter = 1
 script = ExtResource("1_4ddp2")
@@ -225,4 +233,10 @@ text = "0"
 label_settings = SubResource("LabelSettings_5qc61")
 horizontal_alignment = 2
 
-[connection signal="animation_finished" from="timer/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_texef")
+}
+
+[connection signal="animation_finished" from="timer/AnimationPlayer" to="." method="_on_timer_animation_finished"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
