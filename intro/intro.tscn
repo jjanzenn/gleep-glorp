@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://bfjc5wnr856i0"]
+[gd_scene load_steps=10 format=3 uid="uid://bfjc5wnr856i0"]
 
 [ext_resource type="Texture2D" uid="uid://cxkdjrsjgxc1i" path="res://intro/IN 1952, GLEEP GLORP WAS SPOTTEN IN WYOMING CITY OKLAHOMA copy.jpg" id="1_s003a"]
 [ext_resource type="FontFile" uid="uid://bideg67mphojc" path="res://earthbound-menu-extended/earthbound-menu-extended.ttf" id="2_upjyk"]
 [ext_resource type="Texture2D" uid="uid://cfyq7dvepfqee" path="res://intro/squiggly.png" id="3_jy1dj"]
 [ext_resource type="Texture2D" uid="uid://degwesxnpcwkw" path="res://intro/IMG_6032 small.jpg" id="4_x0pcv"]
+[ext_resource type="AudioStream" uid="uid://cg75k5jwo7axv" path="res://music/Gleep Glorp Intro.mp3" id="5_vyos2"]
 
 [sub_resource type="Animation" id="Animation_1mp6x"]
 length = 0.001
@@ -116,7 +117,7 @@ tracks/3/path = NodePath("slide2/Label:text")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 12, 14, 14.08, 15.11, 15.2),
+"times": PackedFloat32Array(0, 12, 14, 14.08, 15.11, 15.33),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": ["Now, in the distanct future of 201X, gleep glorps 
@@ -138,6 +139,20 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AudioStreamPlayer")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dss23"]
@@ -392,3 +407,6 @@ visible = false
 offset_right = 256.0
 offset_bottom = 192.0
 color = Color(0, 0, 0, 1)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_vyos2")
