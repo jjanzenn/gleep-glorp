@@ -1,4 +1,4 @@
-extends Node2D
+extends Microgame
 
 var frame_time = 0.2
 
@@ -23,6 +23,10 @@ func _process(delta: float) -> void:
 		state = 1
 	elif Input.is_action_just_released("action"):
 		done = true
+		if state == 4:
+			win.emit()
+		else:
+			lose.emit()
 		
 	if state == 0:
 		$"power-bar/stage-0".visible = true

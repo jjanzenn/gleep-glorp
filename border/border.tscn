@@ -1,5 +1,6 @@
-[gd_scene load_steps=15 format=3 uid="uid://djwft0gtmmc"]
+[gd_scene load_steps=16 format=3 uid="uid://djwft0gtmmc"]
 
+[ext_resource type="Script" uid="uid://bjco6eaif743y" path="res://border/border.gd" id="1_4ddp2"]
 [ext_resource type="Material" uid="uid://dbphkv3ulf3r3" path="res://border/palette.tres" id="1_pj3cr"]
 [ext_resource type="Texture2D" uid="uid://c38ygy8h7o5s3" path="res://border/border.png" id="1_pvew4"]
 [ext_resource type="PackedScene" uid="uid://c175o6po8gcu2" path="res://microgames/petting/petting.tscn" id="2_4q5v0"]
@@ -150,6 +151,7 @@ animations = [{
 
 [node name="Border" type="Node2D"]
 texture_filter = 1
+script = ExtResource("1_4ddp2")
 
 [node name="Border" type="Sprite2D" parent="."]
 position = Vector2(173, 130)
@@ -215,3 +217,6 @@ texture = ExtResource("9_u3x0q")
 position = Vector2(137.20001, 20)
 scale = Vector2(2.016, 2)
 texture = ExtResource("9_u3x0q")
+
+[connection signal="lose" from="Microgame/root" to="." method="_on_microgame_lose"]
+[connection signal="win" from="Microgame/root" to="." method="_on_microgame_win"]
