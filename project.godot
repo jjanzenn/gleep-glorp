@@ -11,8 +11,17 @@ config_version=5
 [application]
 
 config/name="gleep-glorp"
-config/features=PackedStringArray("4.5", "GL Compatibility")
+run/main_scene="res://intro.tscn"
+config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=256
+window/size/viewport_height=192
+window/size/window_width_override=960
+window/size/window_height_override=720
+window/stretch/mode="viewport"
 
 [rendering]
 
