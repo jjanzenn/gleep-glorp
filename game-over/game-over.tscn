@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cybaauk70lxp3"]
+
+[ext_resource type="Script" uid="uid://c35kvkpvwwjuc" path="res://game-over/game_over.gd" id="1_l46u3"]
+[ext_resource type="Texture2D" uid="uid://b0vyfhoixds3y" path="res://gimp-projects/game-over-1.png" id="1_vgqx3"]
+[ext_resource type="Texture2D" uid="uid://c5henpndpxbwe" path="res://gimp-projects/game-over-2.png" id="2_cg6m5"]
+
+[node name="root" type="Node2D"]
+script = ExtResource("1_l46u3")
+
+[node name="bg-1" type="Sprite2D" parent="."]
+position = Vector2(173, 130)
+texture = ExtResource("1_vgqx3")
+
+[node name="bg-2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(173, 130)
+texture = ExtResource("2_cg6m5")

@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dn0trkm7ts5hn" path="res://gimp-projects/babie-1.png" id="5_q2m4c"]
 [ext_resource type="Texture2D" uid="uid://i4vmt7yt31s8" path="res://gimp-projects/babie-2.png" id="6_k526u"]
 
-[node name="root" type="Node2D"]
+[node name="root2" type="Node2D"]
 script = ExtResource("1_uxlpy")
 
 [node name="ColorRect" type="ColorRect" parent="."]
