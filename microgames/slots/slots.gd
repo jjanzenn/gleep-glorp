@@ -1,4 +1,4 @@
-extends Node2D
+extends Microgame
 
 var will_win = false
 
@@ -70,6 +70,7 @@ func _process(delta: float) -> void:
 					$"text-bubble/lose-text".visible = true
 				set_icon(s3, $"slot-3")
 				done_3 = true
+				won = will_win
 
 	if animation_time > animation_speed:
 		if not done_1:
