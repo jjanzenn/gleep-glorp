@@ -38,4 +38,5 @@ func _on_timer_animation_finished(_anim_name: StringName) -> void:
 func _on_animation_player_animation_finished(_anim_name: StringName) -> void:
 	print("waiter waiter one more game please")
 	
-	add_child(preload("res://microgames/fishing/root.tscn").instantiate())
+	$Microgame.add_child(preload("res://microgames/fishing/root.tscn").instantiate())
+	$timer/AnimationPlayer.play("timer")

@@ -172,9 +172,9 @@ position = Vector2(173, 130)
 texture = ExtResource("1_pvew4")
 
 [node name="Microgame" type="Node2D" parent="."]
+position = Vector2(45, 34)
 
 [node name="root" parent="Microgame" instance=ExtResource("2_4q5v0")]
-position = Vector2(45, 34)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
