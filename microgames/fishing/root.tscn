@@ -10,7 +10,7 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_01i7h"]
 font = ExtResource("7_im46w")
-font_size = 22
+font_size = 11
 font_color = Color(0, 0, 0, 1)
 
 [node name="root" type="Node2D"]
@@ -39,10 +39,10 @@ position = Vector2(128, 96)
 texture = ExtResource("5_im46w")
 
 [node name="instructions" type="Label" parent="."]
-visible = false
-offset_left = 102.0
-offset_top = 33.0
-offset_right = 186.0
-offset_bottom = 65.0
+offset_left = 107.0
+offset_top = 34.0
+offset_right = 191.0
+offset_bottom = 66.0
+scale = Vector2(2, 2)
 text = "Mash A!!!"
 label_settings = SubResource("LabelSettings_01i7h")

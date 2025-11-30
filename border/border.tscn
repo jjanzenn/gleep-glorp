@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bjco6eaif743y" path="res://border/border.gd" id="1_4ddp2"]
 [ext_resource type="Material" uid="uid://dbphkv3ulf3r3" path="res://border/palette.tres" id="1_pj3cr"]
 [ext_resource type="Texture2D" uid="uid://c38ygy8h7o5s3" path="res://border/border.png" id="1_pvew4"]
-[ext_resource type="PackedScene" uid="uid://c175o6po8gcu2" path="res://microgames/petting/petting.tscn" id="2_4q5v0"]
+[ext_resource type="PackedScene" uid="uid://c6d4ldf4vltqp" path="res://microgames/fishing/root.tscn" id="4_5qc61"]
 [ext_resource type="Texture2D" uid="uid://dfnp7l0s6ihc4" path="res://border/yoofo1.png" id="4_rqwb3"]
 [ext_resource type="Texture2D" uid="uid://bo7ps0rmftp8m" path="res://border/yoofo2.png" id="5_6dhu7"]
 [ext_resource type="Texture2D" uid="uid://cird3ou5ywcl0" path="res://border/yoofo3.png" id="6_enkjd"]
@@ -155,14 +155,14 @@ font = ExtResource("11_t8cbv")
 font_size = 11
 font_color = Color(0, 0, 0, 1)
 
-[sub_resource type="Animation" id="Animation_n6usr"]
-resource_name = "win"
+[sub_resource type="Animation" id="Animation_e051e"]
+resource_name = "game_over"
 
 [sub_resource type="Animation" id="Animation_texef"]
 resource_name = "lose"
 
-[sub_resource type="Animation" id="Animation_e051e"]
-resource_name = "game_over"
+[sub_resource type="Animation" id="Animation_n6usr"]
+resource_name = "win"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_texef"]
 _data = {
@@ -182,7 +182,7 @@ texture = ExtResource("1_pvew4")
 [node name="Microgame" type="Node2D" parent="."]
 position = Vector2(45, 34)
 
-[node name="root" parent="Microgame" instance=ExtResource("2_4q5v0")]
+[node name="root2" parent="Microgame" instance=ExtResource("4_5qc61")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
