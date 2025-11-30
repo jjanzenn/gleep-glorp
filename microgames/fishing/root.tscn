@@ -39,6 +39,7 @@ position = Vector2(128, 96)
 texture = ExtResource("5_im46w")
 
 [node name="instructions" type="Label" parent="."]
+visible = false
 offset_left = 107.0
 offset_top = 34.0
 offset_right = 191.0
