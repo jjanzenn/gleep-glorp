@@ -48,7 +48,7 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	print("waiter waiter one more game please")
 	
 	if anim_name == "win" or anim_name == "lose":
-		if score == 10:
+		if score == 5:
 			get_tree().root.add_child(preload("res://child-adolescent/child-adolescent.tscn").instantiate())
 			queue_free()
 		else:
