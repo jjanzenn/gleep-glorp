@@ -3,15 +3,18 @@ extends Node2D
 var lives: int = 4
 var score: int = 0
 var childhood_games = []
-var game_indices = [0, 1, 2]
+var game_indices = [0, 1, 2, 3, 4, 5, 6]
 var game_index = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	childhood_games.append(preload("res://microgames/petting/petting.tscn"))
-	#childhood_games.append(preload("res://microgames/feeding/feeding.tscn"))
-	childhood_games.append(preload("res://microgames/fishing/root.tscn"))
-	childhood_games.append(preload("res://microgames/scrub/scrub.tscn"))
+	childhood_games.append(preload("res://microgames/blackjack/root.tscn"))
+	childhood_games.append(preload("res://microgames/dating-sim/dating-sim.tscn"))
+	childhood_games.append(preload("res://microgames/driving/driving.tscn"))
+	childhood_games.append(preload("res://microgames/homework-easy/homework_easy.tscn"))
+	childhood_games.append(preload("res://microgames/homework-hard/homework-hard.tscn"))
+	childhood_games.append(preload("res://microgames/homework-hard/homework-hard.tscn"))
+	childhood_games.append(preload("res://microgames/slots/slots.tscn"))
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
@@ -46,7 +49,7 @@ func _on_timer_animation_finished(_anim_name: StringName) -> void:
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	print("waiter waiter one more game please")
-	if score == 1:
+	if score == 5:
 		get_tree().root.add_child(preload("res://loading/to_adolescent_evolution.tscn").instantiate())
 		queue_free()
 	else:
