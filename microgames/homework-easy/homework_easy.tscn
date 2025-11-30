@@ -1,0 +1,120 @@
+[gd_scene load_steps=13 format=3 uid="uid://po86d2y12l8e"]
+
+[ext_resource type="Script" uid="uid://cvm4nf04twoq3" path="res://microgames/homework-easy/homework_easy.gd" id="1_xasfi"]
+[ext_resource type="FontFile" uid="uid://bideg67mphojc" path="res://earthbound-menu-extended/earthbound-menu-extended.ttf" id="2_8f1ke"]
+[ext_resource type="Texture2D" uid="uid://dyrpvep27iom5" path="res://microgames/homework-easy/button-a.png" id="3_385su"]
+[ext_resource type="Texture2D" uid="uid://b3gkladq2ag1q" path="res://microgames/homework-easy/button-y.png" id="4_yfkx8"]
+[ext_resource type="Texture2D" uid="uid://ck6iyjeaaqfr" path="res://microgames/homework-easy/button-x.png" id="5_yq45w"]
+[ext_resource type="Texture2D" uid="uid://bkn236jy8lnsh" path="res://microgames/homework-easy/button-b.png" id="6_etcau"]
+[ext_resource type="Texture2D" uid="uid://5j08pnxv0tqt" path="res://microgames/homework-easy/a.png" id="7_yq45w"]
+[ext_resource type="Texture2D" uid="uid://cfq7gpi1ywlem" path="res://microgames/homework-easy/f.png" id="8_etcau"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_alinq"]
+font = ExtResource("2_8f1ke")
+font_size = 33
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_wjlu1"]
+font = ExtResource("2_8f1ke")
+font_size = 22
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_oxmun"]
+font = ExtResource("2_8f1ke")
+font_size = 22
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_385su"]
+font = ExtResource("2_8f1ke")
+font_size = 22
+font_color = Color(0, 0, 0, 1)
+
+[node name="root" type="Node2D"]
+script = ExtResource("1_xasfi")
+
+[node name="background" type="ColorRect" parent="."]
+offset_right = 256.0
+offset_bottom = 192.0
+color = Color(0, 0, 0, 1)
+
+[node name="bottom-paper" type="ColorRect" parent="."]
+offset_left = 19.0
+offset_top = 29.000002
+offset_right = 27.5
+offset_bottom = 35.554123
+rotation = -0.10471976
+scale = Vector2(25, 25)
+color = Color(0.6666667, 0.6666667, 0.6666667, 1)
+
+[node name="top-paper" type="ColorRect" parent="."]
+offset_left = 36.0
+offset_top = 20.0
+offset_right = 44.5
+offset_bottom = 26.880001
+scale = Vector2(25, 25)
+
+[node name="question" type="Label" parent="."]
+offset_left = 51.0
+offset_top = 34.0
+offset_right = 201.0
+offset_bottom = 82.0
+text = "12 x 12 = ?"
+label_settings = SubResource("LabelSettings_alinq")
+
+[node name="answer-y" type="Label" parent="."]
+offset_left = 114.0
+offset_top = 93.0
+offset_right = 154.0
+offset_bottom = 125.0
+text = "144"
+label_settings = SubResource("LabelSettings_wjlu1")
+
+[node name="answer-a" type="Label" parent="."]
+offset_left = 116.0
+offset_top = 141.0
+offset_right = 156.0
+offset_bottom = 173.0
+text = "144"
+label_settings = SubResource("LabelSettings_oxmun")
+
+[node name="answer-x" type="Label" parent="."]
+offset_left = 76.0
+offset_top = 116.0
+offset_right = 116.0
+offset_bottom = 148.0
+text = "144"
+label_settings = SubResource("LabelSettings_385su")
+
+[node name="answer-b" type="Label" parent="."]
+offset_left = 153.0
+offset_top = 117.0
+offset_right = 193.0
+offset_bottom = 149.0
+text = "144"
+label_settings = SubResource("LabelSettings_385su")
+
+[node name="A" type="Sprite2D" parent="."]
+position = Vector2(134, 178)
+texture = ExtResource("3_385su")
+
+[node name="Y" type="Sprite2D" parent="."]
+position = Vector2(132, 87)
+texture = ExtResource("4_yfkx8")
+
+[node name="X" type="Sprite2D" parent="."]
+position = Vector2(67, 133)
+texture = ExtResource("5_yq45w")
+
+[node name="B" type="Sprite2D" parent="."]
+position = Vector2(200, 134)
+texture = ExtResource("6_etcau")
+
+[node name="A+" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(126, 109)
+texture = ExtResource("7_yq45w")
+
+[node name="F" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(128, 110)
+texture = ExtResource("8_etcau")
