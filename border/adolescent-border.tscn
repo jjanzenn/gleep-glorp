@@ -1,6 +1,6 @@
 [gd_scene load_steps=29 format=3 uid="uid://gmpwari7t5ph"]
 
-[ext_resource type="Script" uid="uid://bjco6eaif743y" path="res://border/border.gd" id="1_dua8v"]
+[ext_resource type="Script" uid="uid://c0tkgf7v1gyqs" path="res://border/adolescent-border.gd" id="1_dua8v"]
 [ext_resource type="Texture2D" uid="uid://d25ba7uihj0cw" path="res://border/adulthood_border_angry1.png" id="4_dua8v"]
 [ext_resource type="Texture2D" uid="uid://7c1syymtvje" path="res://border/adulthood_border_angry2.png" id="5_ppp4o"]
 [ext_resource type="Texture2D" uid="uid://dlsh2nx2lvdp4" path="res://border/adulthood_border_neutral1.png" id="6_dua8v"]
