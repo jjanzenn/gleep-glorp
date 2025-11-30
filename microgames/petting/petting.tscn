@@ -146,7 +146,5 @@ texture = ExtResource("10_js0ru")
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
 material = ExtResource("11_js0ru")
-offset_left = -52.0
-offset_top = -26.0
-offset_right = 294.0
-offset_bottom = 234.0
+offset_right = 346.0
+offset_bottom = 260.0
