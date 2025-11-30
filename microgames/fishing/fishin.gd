@@ -1,4 +1,4 @@
-extends Node2D
+extends Microgame
 
 var idle_time = 1.5
 var max_active_time = 4
@@ -26,6 +26,7 @@ func _process(delta: float) -> void:
 		$"screen-active".visible = false
 		$"screen-idle".visible = false
 		$"screen-success".visible = true
+		won = true
 	elif elapsed > max_active_time:
 		$"screen-active".visible = false
 		$"screen-idle".visible = true
