@@ -1,0 +1,67 @@
+[gd_scene load_steps=6 format=3 uid="uid://cd2n1rrhjygfu"]
+
+[ext_resource type="FontFile" uid="uid://bideg67mphojc" path="res://earthbound-menu-extended/earthbound-menu-extended.ttf" id="1_dl7y6"]
+[ext_resource type="Script" uid="uid://cqwr5nf3iadxp" path="res://microgames/homework-hard/homework_hard.gd" id="1_o1t6i"]
+[ext_resource type="Texture2D" uid="uid://5j08pnxv0tqt" path="res://microgames/homework-easy/a.png" id="2_o1t6i"]
+[ext_resource type="Texture2D" uid="uid://cfq7gpi1ywlem" path="res://microgames/homework-easy/f.png" id="3_8xt82"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lx0kj"]
+font = ExtResource("1_dl7y6")
+font_size = 11
+font_color = Color(0, 0, 0, 1)
+
+[node name="root" type="Node2D"]
+script = ExtResource("1_o1t6i")
+
+[node name="background" type="ColorRect" parent="."]
+offset_right = 256.0
+offset_bottom = 192.0
+color = Color(0, 0, 0, 1)
+
+[node name="bottom-paper" type="ColorRect" parent="."]
+offset_left = 19.0
+offset_top = 29.000002
+offset_right = 27.5
+offset_bottom = 35.554123
+rotation = -0.10471976
+scale = Vector2(25, 25)
+color = Color(0.6666667, 0.6666667, 0.6666667, 1)
+
+[node name="top-paper" type="ColorRect" parent="."]
+offset_left = 36.0
+offset_top = 20.0
+offset_right = 44.5
+offset_bottom = 26.880001
+scale = Vector2(25, 25)
+
+[node name="question" type="Label" parent="."]
+offset_left = 38.0
+offset_top = 22.0
+offset_right = 1004.0
+offset_bottom = 70.0
+text = "An instance of the Boolean satisfiability
+problem is a Boolean expression that combines
+Boolean variables using Boolean operators. Such
+an expression is satisfiable if there is some
+assignment of truth values to the variables that
+makes the entire expression true. Give a proof
+that this is NP-Hard."
+label_settings = SubResource("LabelSettings_lx0kj")
+
+[node name="A+" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(126, 109)
+texture = ExtResource("2_o1t6i")
+
+[node name="F" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(128, 110)
+texture = ExtResource("3_8xt82")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 42.0
+offset_top = 150.0
+offset_right = 243.0
+offset_bottom = 190.0
+placeholder_text = "type here...."
+scroll_fit_content_height = true
