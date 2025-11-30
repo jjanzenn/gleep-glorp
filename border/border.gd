@@ -48,10 +48,14 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	print("waiter waiter one more game please")
 	
 	if anim_name == "win" or anim_name == "lose":
-		var new_game_index = game_indices.pick_random()
-		while game_index == new_game_index:
-			new_game_index = game_indices.pick_random()
-		game_index = new_game_index
-		
-		$Microgame.add_child(childhood_games[game_index].instantiate())
-		$timer/AnimationPlayer.play("timer")
+		if score == 10:
+			get_tree().root.add_child(preload("res://child-adolescent/child-adolescent.tscn").instantiate())
+			queue_free()
+		else:
+			var new_game_index = game_indices.pick_random()
+			while game_index == new_game_index:
+				new_game_index = game_indices.pick_random()
+			game_index = new_game_index
+			
+			$Microgame.add_child(childhood_games[game_index].instantiate())
+			$timer/AnimationPlayer.play("timer")
