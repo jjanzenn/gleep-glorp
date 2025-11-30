@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c175o6po8gcu2"]
+[gd_scene load_steps=12 format=3 uid="uid://c175o6po8gcu2"]
 
 [ext_resource type="Script" uid="uid://s1sj1tphbrhf" path="res://microgames/petting/power_bar.gd" id="2_4h6ry"]
 [ext_resource type="Texture2D" uid="uid://dw6ywncdcs2jk" path="res://microgames/petting/gleep-petting.png" id="2_js0ru"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://8uwpfeq2ui1w" path="res://microgames/petting/heart.png" id="8_sboeh"]
 [ext_resource type="Texture2D" uid="uid://ccmt33k61eygf" path="res://microgames/petting/angy-squiggle-1.png" id="9_wba6c"]
 [ext_resource type="Texture2D" uid="uid://b7pktnx56jsbh" path="res://microgames/petting/angy-squiggle-2.png" id="10_js0ru"]
+[ext_resource type="Material" uid="uid://dbphkv3ulf3r3" path="res://border/palette.tres" id="11_js0ru"]
 
 [node name="root" type="Node2D"]
 texture_filter = 1
@@ -140,3 +141,12 @@ position = Vector2(178, 252)
 [node name="squiggle" type="Sprite2D" parent="angy/frame-2"]
 position = Vector2(-35.999996, -211)
 texture = ExtResource("10_js0ru")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+material = ExtResource("11_js0ru")
+offset_left = -52.0
+offset_top = -26.0
+offset_right = 294.0
+offset_bottom = 234.0

@@ -12,4 +12,5 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("action") and in_intro:
 		in_intro = false
 		$AudioStreamPlayer.stop()
-		add_child(preload("res://border/border.tscn").instantiate())
+		
+		add_child(preload("res://loading/loading.tscn").instantiate())

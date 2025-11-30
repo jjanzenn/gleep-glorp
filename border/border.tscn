@@ -1,7 +1,6 @@
-[gd_scene load_steps=22 format=3 uid="uid://djwft0gtmmc"]
+[gd_scene load_steps=21 format=3 uid="uid://djwft0gtmmc"]
 
 [ext_resource type="Script" uid="uid://bjco6eaif743y" path="res://border/border.gd" id="1_4ddp2"]
-[ext_resource type="Material" uid="uid://dbphkv3ulf3r3" path="res://border/palette.tres" id="1_pj3cr"]
 [ext_resource type="Texture2D" uid="uid://c38ygy8h7o5s3" path="res://border/border.png" id="1_pvew4"]
 [ext_resource type="PackedScene" uid="uid://c175o6po8gcu2" path="res://microgames/petting/petting.tscn" id="2_4q5v0"]
 [ext_resource type="Texture2D" uid="uid://dfnp7l0s6ihc4" path="res://border/yoofo1.png" id="4_rqwb3"]
@@ -183,13 +182,6 @@ texture = ExtResource("1_pvew4")
 position = Vector2(45, 34)
 
 [node name="root" parent="Microgame" instance=ExtResource("2_4q5v0")]
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-material = ExtResource("1_pj3cr")
-offset_right = 346.0
-offset_bottom = 260.0
 
 [node name="timer" type="Node2D" parent="."]
 
