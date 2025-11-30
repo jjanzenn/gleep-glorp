@@ -43,7 +43,8 @@ func _on_timer_animation_finished(_anim_name: StringName) -> void:
 			if lives > 1:
 				$AnimationPlayer.play("lose")
 			else:
-				$AnimationPlayer.play("game_over")
+				get_tree().root.add_child(preload("res://game-over/game-over.tscn").instantiate())
+				queue_free()
 			lives -= 1
 			
 
@@ -52,14 +53,10 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	print("waiter waiter one more game please")
 	
 	if anim_name == "win" or anim_name == "lose":
-		if score == 1:
-			get_tree().root.add_child(preload("res://loading/to_adolescent_evolution.tscn").instantiate())
-			queue_free()
-		else:
-			var new_game_index = game_indices.pick_random()
-			while game_index == new_game_index:
-				new_game_index = game_indices.pick_random()
-			game_index = new_game_index
-			
-			$Microgame.add_child(childhood_games[game_index].instantiate())
-			$timer/AnimationPlayer.play("timer")
+		var new_game_index = game_indices.pick_random()
+		while game_index == new_game_index:
+			new_game_index = game_indices.pick_random()
+		game_index = new_game_index
+		
+		$Microgame.add_child(childhood_games[game_index].instantiate())
+		$timer/AnimationPlayer.play("timer")

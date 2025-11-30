@@ -1,11 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://bfjc5wnr856i0"]
+[gd_scene load_steps=12 format=3 uid="uid://bfjc5wnr856i0"]
 
 [ext_resource type="Script" uid="uid://bhmleeus082kw" path="res://intro/intro.gd" id="1_1q7h5"]
 [ext_resource type="Texture2D" uid="uid://cxkdjrsjgxc1i" path="res://intro/IN 1952, GLEEP GLORP WAS SPOTTEN IN WYOMING CITY OKLAHOMA copy.jpg" id="1_s003a"]
 [ext_resource type="FontFile" uid="uid://bideg67mphojc" path="res://earthbound-menu-extended/earthbound-menu-extended.ttf" id="2_upjyk"]
 [ext_resource type="Texture2D" uid="uid://cfyq7dvepfqee" path="res://intro/squiggly.png" id="3_jy1dj"]
 [ext_resource type="Texture2D" uid="uid://degwesxnpcwkw" path="res://intro/IMG_6032 small.jpg" id="4_x0pcv"]
-[ext_resource type="AudioStream" uid="uid://bsheslthnvkko" path="res://music/Gleep Glorp Intro FINAL.mp3" id="5_vyos2"]
+[ext_resource type="AudioStream" uid="uid://bsheslthnvkko" path="res://music/Gleep Glorp Intro FINAL.mp3" id="6_1q7h5"]
+[ext_resource type="Material" uid="uid://dbphkv3ulf3r3" path="res://border/palette.tres" id="7_a5lnx"]
 
 [sub_resource type="Animation" id="Animation_1mp6x"]
 length = 0.001
@@ -411,7 +412,14 @@ offset_bottom = 260.0
 color = Color(0, 0, 0, 1)
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_vyos2")
+stream = ExtResource("6_1q7h5")
 max_polyphony = 6
 
 [node name="Voiceover1" type="AudioStreamPlayer" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+material = ExtResource("7_a5lnx")
+offset_right = 346.0
+offset_bottom = 260.0

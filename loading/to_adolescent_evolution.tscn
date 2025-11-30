@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b15lqaits3q0h"]
+[gd_scene load_steps=14 format=3 uid="uid://b15lqaits3q0h"]
 
 [ext_resource type="Script" uid="uid://cc07xlrrjqaux" path="res://loading/to_adolescent_evolution.gd" id="1_4vfsi"]
 [ext_resource type="Texture2D" uid="uid://cwe0xff24im65" path="res://loading/dark_pixel.png" id="2_01un4"]
@@ -6,6 +6,8 @@
 [ext_resource type="FontFile" uid="uid://bideg67mphojc" path="res://earthbound-menu-extended/earthbound-menu-extended.ttf" id="4_u2yel"]
 [ext_resource type="Texture2D" uid="uid://ci8fmw53u466" path="res://loading/ninepatch_2_outline.png" id="5_pnvns"]
 [ext_resource type="Texture2D" uid="uid://chc4l1yanmij4" path="res://loading/schrunkh.png" id="6_wl0pt"]
+[ext_resource type="Material" uid="uid://dbphkv3ulf3r3" path="res://border/palette.tres" id="7_01un4"]
+[ext_resource type="AudioStream" uid="uid://c2p3bd7svpsr8" path="res://music/evolultion.mp3" id="8_ltm8o"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_8hdhb"]
 font = ExtResource("4_u2yel")
@@ -139,5 +141,16 @@ libraries = {
 &"": SubResource("AnimationLibrary_pto5n")
 }
 autoplay = "loading"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+material = ExtResource("7_01un4")
+offset_right = 346.0
+offset_bottom = 260.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_ltm8o")
+autoplay = true
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

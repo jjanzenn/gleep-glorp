@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://gmpwari7t5ph"]
+[gd_scene load_steps=30 format=3 uid="uid://gmpwari7t5ph"]
 
 [ext_resource type="Script" uid="uid://c0tkgf7v1gyqs" path="res://border/adolescent-border.gd" id="1_dua8v"]
 [ext_resource type="Texture2D" uid="uid://d25ba7uihj0cw" path="res://border/adulthood_border_angry1.png" id="4_dua8v"]
@@ -15,7 +15,8 @@
 [ext_resource type="Texture2D" uid="uid://cj8jo4bamusp4" path="res://border/explod2.png" id="13_hsnih"]
 [ext_resource type="PackedScene" uid="uid://cqm7aajykbg28" path="res://border/life.tscn" id="14_kiwii"]
 [ext_resource type="FontFile" uid="uid://bideg67mphojc" path="res://earthbound-menu-extended/earthbound-menu-extended.ttf" id="15_65716"]
-[ext_resource type="AudioStream" path="res://music/Gleep Glorp Child Theme FINAL.mp3" id="16_ajiv5"]
+[ext_resource type="AudioStream" uid="uid://8y52yq45cp7o" path="res://music/adult.mp3" id="16_dua8v"]
+[ext_resource type="Material" uid="uid://dbphkv3ulf3r3" path="res://border/palette.tres" id="17_ppp4o"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_n6usr"]
 animations = [{
@@ -327,8 +328,15 @@ libraries = {
 }
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("16_ajiv5")
+stream = ExtResource("16_dua8v")
 autoplay = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="AudioStreamPlayer"]
+
+[node name="ColorRect" type="ColorRect" parent="AudioStreamPlayer/CanvasLayer"]
+material = ExtResource("17_ppp4o")
+offset_right = 346.0
+offset_bottom = 260.0
 
 [connection signal="animation_finished" from="timer/AnimationPlayer" to="." method="_on_timer_animation_finished"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
