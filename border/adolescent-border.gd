@@ -3,15 +3,19 @@ extends Node2D
 var lives: int = 4
 var score: int = 0
 var childhood_games = []
-var game_indices = [0, 1, 2, 3]
+
+var game_indices = [0, 1, 2, 3, 4, 5, 6]
 var game_index = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	childhood_games.append(preload("res://microgames/petting/petting.tscn"))
-	childhood_games.append(preload("res://microgames/feeding/feeding.tscn"))
-	childhood_games.append(preload("res://microgames/fishing/root.tscn"))
-	childhood_games.append(preload("res://microgames/scrub/scrub.tscn"))
+	childhood_games.append(preload("res://microgames/blackjack/root.tscn"))
+	childhood_games.append(preload("res://microgames/dating-sim/dating-sim.tscn"))
+	childhood_games.append(preload("res://microgames/driving/driving.tscn"))
+	childhood_games.append(preload("res://microgames/homework-easy/homework_easy.tscn"))
+	childhood_games.append(preload("res://microgames/homework-hard/homework-hard.tscn"))
+	childhood_games.append(preload("res://microgames/homework-hard/homework-hard.tscn"))
+	childhood_games.append(preload("res://microgames/slots/slots.tscn"))
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
