@@ -2,11 +2,16 @@ extends Node2D
 
 var lives: int = 4
 var score: int = 0
+var childhood_games = []
+var game_indices = [0, 1, 2, 3]
+var game_index = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
+	childhood_games.append(preload("res://microgames/petting/petting.tscn"))
+	childhood_games.append(preload("res://microgames/feeding/feeding.tscn"))
+	childhood_games.append(preload("res://microgames/fishing/root.tscn"))
+	childhood_games.append(preload("res://microgames/scrub/scrub.tscn"))
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
@@ -43,5 +48,10 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	print("waiter waiter one more game please")
 	
 	if anim_name == "win" or anim_name == "lose":
-		$Microgame.add_child(preload("res://microgames/fishing/root.tscn").instantiate())
+		var new_game_index = game_indices.pick_random()
+		while game_index == new_game_index:
+			new_game_index = game_indices.pick_random()
+		game_index = new_game_index
+		
+		$Microgame.add_child(childhood_games[game_index].instantiate())
 		$timer/AnimationPlayer.play("timer")
