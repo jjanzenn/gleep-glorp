@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://djwft0gtmmc"]
+[gd_scene load_steps=29 format=3 uid="uid://djwft0gtmmc"]
 
 [ext_resource type="Script" uid="uid://bjco6eaif743y" path="res://border/border.gd" id="1_4ddp2"]
 [ext_resource type="PackedScene" uid="uid://c175o6po8gcu2" path="res://microgames/petting/petting.tscn" id="2_4q5v0"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://cj8jo4bamusp4" path="res://border/explod2.png" id="8_4ddp2"]
 [ext_resource type="PackedScene" uid="uid://cqm7aajykbg28" path="res://border/life.tscn" id="10_t8cbv"]
 [ext_resource type="FontFile" uid="uid://bideg67mphojc" path="res://earthbound-menu-extended/earthbound-menu-extended.ttf" id="11_t8cbv"]
+[ext_resource type="AudioStream" uid="uid://cefpbit72wpva" path="res://music/Gleep Glorp Child Theme FINAL.mp3" id="16_qgm46"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_n6usr"]
 animations = [{
@@ -324,6 +325,10 @@ horizontal_alignment = 2
 libraries = {
 &"": SubResource("AnimationLibrary_texef")
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("16_qgm46")
+autoplay = true
 
 [connection signal="animation_finished" from="timer/AnimationPlayer" to="." method="_on_timer_animation_finished"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
