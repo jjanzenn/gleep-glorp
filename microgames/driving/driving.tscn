@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://k5dykk3j8li1"]
+
+[ext_resource type="Script" uid="uid://fi5exmje8ryt" path="res://microgames/driving/driving.gd" id="1_iaj31"]
+[ext_resource type="Texture2D" uid="uid://fnhxx3uild7b" path="res://microgames/driving/driving-background.png" id="1_y8aoy"]
+[ext_resource type="Texture2D" uid="uid://c016kh544s3bp" path="res://microgames/driving/yoofo3.png" id="2_h4dfl"]
+[ext_resource type="Texture2D" uid="uid://78bjvaomhyoe" path="res://microgames/driving/truck.png" id="3_iaj31"]
+
+[node name="root" type="Node2D"]
+script = ExtResource("1_iaj31")
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(128, 96)
+texture = ExtResource("1_y8aoy")
+
+[node name="truck-1" type="RigidBody2D" parent="."]
+position = Vector2(55, 53)
+gravity_scale = 0.0
+
+[node name="truck-1" type="Sprite2D" parent="truck-1"]
+texture = ExtResource("3_iaj31")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="truck-1"]
+polygon = PackedVector2Array(-43, -20, -48, 20, 44, 20, 48, -17)
+
+[node name="truck-2" type="RigidBody2D" parent="."]
+position = Vector2(200, 53)
+gravity_scale = 0.0
+
+[node name="truck-1" type="Sprite2D" parent="truck-2"]
+texture = ExtResource("3_iaj31")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="truck-2"]
+polygon = PackedVector2Array(-43, -20, -48, 20, 44, 20, 48, -17)
+
+[node name="you" type="RigidBody2D" parent="."]
+position = Vector2(17, 135)
+gravity_scale = 0.0
+
+[node name="you" type="Sprite2D" parent="you"]
+texture = ExtResource("2_h4dfl")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="you"]
+polygon = PackedVector2Array(-9, -5, -12, -5, -17, 0, -17, 7, -14, 9, 5, 9, 16, 6, 17, -1, 13, -5, 9, -5, 6, -9, -3, -10)
