@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://djwft0gtmmc"]
+[gd_scene load_steps=22 format=3 uid="uid://djwft0gtmmc"]
 
 [ext_resource type="Script" uid="uid://bjco6eaif743y" path="res://border/border.gd" id="1_4ddp2"]
 [ext_resource type="Material" uid="uid://dbphkv3ulf3r3" path="res://border/palette.tres" id="1_pj3cr"]
@@ -158,8 +158,16 @@ font_color = Color(0, 0, 0, 1)
 [sub_resource type="Animation" id="Animation_n6usr"]
 resource_name = "win"
 
+[sub_resource type="Animation" id="Animation_texef"]
+resource_name = "lose"
+
+[sub_resource type="Animation" id="Animation_e051e"]
+resource_name = "game_over"
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_texef"]
 _data = {
+&"game_over": SubResource("Animation_e051e"),
+&"lose": SubResource("Animation_texef"),
 &"win": SubResource("Animation_n6usr")
 }
 
