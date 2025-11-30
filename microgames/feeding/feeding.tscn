@@ -1,0 +1,298 @@
+[gd_scene load_steps=21 format=3 uid="uid://buog5yeolcy2f"]
+
+[ext_resource type="Script" uid="uid://fwqcunrubi2h" path="res://microgames/feeding/feeding.gd" id="1_pnrni"]
+[ext_resource type="Texture2D" uid="uid://dw6ywncdcs2jk" path="res://microgames/petting/gleep-petting.png" id="1_tpk7p"]
+[ext_resource type="FontFile" uid="uid://bideg67mphojc" path="res://earthbound-menu-extended/earthbound-menu-extended.ttf" id="2_0pwaq"]
+[ext_resource type="Texture2D" uid="uid://cfyq7dvepfqee" path="res://intro/squiggly.png" id="3_6hwpe"]
+[ext_resource type="Texture2D" uid="uid://vm6l0r4eyvfa" path="res://microgames/feeding/dwayne.png" id="3_doi2q"]
+[ext_resource type="Texture2D" uid="uid://djnxvoxpe4o3g" path="res://microgames/feeding/salt.png" id="4_tcrcm"]
+[ext_resource type="Texture2D" uid="uid://rpojo53mdlgu" path="res://microgames/feeding/broccoli.png" id="5_kemi4"]
+[ext_resource type="Texture2D" uid="uid://dt0ooi7vo2ptd" path="res://microgames/feeding/hamburger.png" id="6_6hwpe"]
+[ext_resource type="Texture2D" uid="uid://dyrpvep27iom5" path="res://microgames/homework-easy/button-a.png" id="7_pnrni"]
+[ext_resource type="Texture2D" uid="uid://bkn236jy8lnsh" path="res://microgames/homework-easy/button-b.png" id="8_5kxpc"]
+[ext_resource type="Texture2D" uid="uid://ck6iyjeaaqfr" path="res://microgames/homework-easy/button-x.png" id="9_goadb"]
+[ext_resource type="Texture2D" uid="uid://b3gkladq2ag1q" path="res://microgames/homework-easy/button-y.png" id="10_ihdnv"]
+[ext_resource type="Texture2D" uid="uid://8uwpfeq2ui1w" path="res://microgames/petting/heart.png" id="13_5kxpc"]
+[ext_resource type="Texture2D" uid="uid://ccmt33k61eygf" path="res://microgames/petting/angy-squiggle-1.png" id="14_ihdnv"]
+[ext_resource type="Texture2D" uid="uid://b7pktnx56jsbh" path="res://microgames/petting/angy-squiggle-2.png" id="15_gd5rw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_doi2q"]
+font = ExtResource("2_0pwaq")
+font_size = 22
+
+[sub_resource type="LabelSettings" id="LabelSettings_goadb"]
+font = ExtResource("2_0pwaq")
+font_size = 44
+
+[sub_resource type="LabelSettings" id="LabelSettings_5kxpc"]
+font = ExtResource("2_0pwaq")
+font_size = 44
+
+[sub_resource type="LabelSettings" id="LabelSettings_pnrni"]
+font = ExtResource("2_0pwaq")
+font_size = 44
+
+[sub_resource type="LabelSettings" id="LabelSettings_tcrcm"]
+font = ExtResource("2_0pwaq")
+font_size = 22
+
+[node name="root" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_pnrni")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 346.0
+offset_bottom = 260.0
+color = Color(0, 0, 0, 1)
+
+[node name="gleep" type="Sprite2D" parent="."]
+position = Vector2(296, 89)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_tpk7p")
+
+[node name="instruction" type="Node2D" parent="."]
+
+[node name="instruction-1" type="Label" parent="instruction"]
+offset_right = 227.0
+offset_bottom = 23.0
+text = "Your gleep glorp wants to eat"
+label_settings = SubResource("LabelSettings_doi2q")
+
+[node name="instruction-rock" type="Label" parent="instruction"]
+visible = false
+offset_left = 62.0
+offset_top = 21.0
+offset_right = 358.0
+offset_bottom = 85.0
+text = "ROCK!!!!"
+label_settings = SubResource("LabelSettings_goadb")
+
+[node name="instruction-salt" type="Label" parent="instruction"]
+visible = false
+offset_left = 62.0
+offset_top = 22.0
+offset_right = 358.0
+offset_bottom = 86.0
+text = "SALT!!!!"
+label_settings = SubResource("LabelSettings_5kxpc")
+
+[node name="instruction-broccollii" type="Label" parent="instruction"]
+visible = false
+offset_left = 36.0
+offset_top = 26.0
+offset_right = 332.0
+offset_bottom = 90.0
+text = "broccollii!!!!"
+label_settings = SubResource("LabelSettings_pnrni")
+
+[node name="GLROP" type="Sprite2D" parent="instruction/instruction-broccollii"]
+position = Vector2(6, 49)
+scale = Vector2(2, 1)
+texture = ExtResource("3_6hwpe")
+
+[node name="squiggly" type="Sprite2D" parent="instruction/instruction-broccollii/GLROP"]
+position = Vector2(8, 0)
+texture = ExtResource("3_6hwpe")
+
+[node name="squiggly" type="Sprite2D" parent="instruction/instruction-broccollii/GLROP/squiggly"]
+position = Vector2(8, 0)
+texture = ExtResource("3_6hwpe")
+
+[node name="squiggly" type="Sprite2D" parent="instruction/instruction-broccollii/GLROP/squiggly/squiggly"]
+position = Vector2(8, 0)
+texture = ExtResource("3_6hwpe")
+
+[node name="squiggly" type="Sprite2D" parent="instruction/instruction-broccollii/GLROP/squiggly/squiggly/squiggly"]
+visible = false
+position = Vector2(8, 0)
+texture = ExtResource("3_6hwpe")
+
+[node name="squiggly" type="Sprite2D" parent="instruction/instruction-broccollii/GLROP/squiggly/squiggly/squiggly/squiggly"]
+position = Vector2(8, 0)
+texture = ExtResource("3_6hwpe")
+
+[node name="squiggly" type="Sprite2D" parent="instruction/instruction-broccollii/GLROP/squiggly/squiggly/squiggly/squiggly/squiggly"]
+position = Vector2(8, 0)
+texture = ExtResource("3_6hwpe")
+
+[node name="GLROP" type="Sprite2D" parent="instruction/instruction-broccollii/GLROP"]
+position = Vector2(32, 0)
+texture = ExtResource("3_6hwpe")
+
+[node name="squiggly" type="Sprite2D" parent="instruction/instruction-broccollii/GLROP/GLROP"]
+position = Vector2(8, 0)
+texture = ExtResource("3_6hwpe")
+
+[node name="squiggly" type="Sprite2D" parent="instruction/instruction-broccollii/GLROP/GLROP/squiggly"]
+position = Vector2(8, 0)
+texture = ExtResource("3_6hwpe")
+
+[node name="squiggly" type="Sprite2D" parent="instruction/instruction-broccollii/GLROP/GLROP/squiggly/squiggly"]
+position = Vector2(8, 0)
+texture = ExtResource("3_6hwpe")
+
+[node name="squiggly" type="Sprite2D" parent="instruction/instruction-broccollii/GLROP/GLROP/squiggly/squiggly/squiggly"]
+visible = false
+position = Vector2(8, 0)
+texture = ExtResource("3_6hwpe")
+
+[node name="squiggly" type="Sprite2D" parent="instruction/instruction-broccollii/GLROP/GLROP/squiggly/squiggly/squiggly/squiggly"]
+position = Vector2(8, 0)
+texture = ExtResource("3_6hwpe")
+
+[node name="squiggly" type="Sprite2D" parent="instruction/instruction-broccollii/GLROP/GLROP/squiggly/squiggly/squiggly/squiggly/squiggly"]
+position = Vector2(8, 0)
+texture = ExtResource("3_6hwpe")
+
+[node name="squiggly2" type="Sprite2D" parent="instruction/instruction-broccollii/GLROP/GLROP/squiggly/squiggly/squiggly"]
+position = Vector2(8, 0)
+texture = ExtResource("3_6hwpe")
+
+[node name="squiggly" type="Sprite2D" parent="instruction/instruction-broccollii/GLROP/GLROP/squiggly/squiggly/squiggly/squiggly2"]
+visible = false
+position = Vector2(8, 0)
+texture = ExtResource("3_6hwpe")
+
+[node name="squiggly" type="Sprite2D" parent="instruction/instruction-broccollii/GLROP/GLROP/squiggly/squiggly/squiggly/squiggly2/squiggly"]
+position = Vector2(8, 0)
+texture = ExtResource("3_6hwpe")
+
+[node name="squiggly" type="Sprite2D" parent="instruction/instruction-broccollii/GLROP/GLROP/squiggly/squiggly/squiggly/squiggly2/squiggly/squiggly"]
+position = Vector2(8, 0)
+texture = ExtResource("3_6hwpe")
+
+[node name="instruction-hamburger" type="Label" parent="instruction"]
+visible = false
+offset_left = 5.0
+offset_top = 27.0
+offset_right = 461.0
+offset_bottom = 91.0
+text = "MOUTHWATERING HAMBURGER!!!"
+label_settings = SubResource("LabelSettings_tcrcm")
+
+[node name="rock" type="Sprite2D" parent="."]
+position = Vector2(77, 171)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_doi2q")
+
+[node name="salt" type="Sprite2D" parent="."]
+position = Vector2(154, 117)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_tcrcm")
+
+[node name="broccollii" type="Sprite2D" parent="."]
+position = Vector2(230, 170)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_kemi4")
+
+[node name="hamburger" type="Sprite2D" parent="."]
+position = Vector2(160, 223)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_6hwpe")
+
+[node name="a" type="Sprite2D" parent="."]
+position = Vector2(115, 228)
+texture = ExtResource("7_pnrni")
+
+[node name="b" type="Sprite2D" parent="."]
+position = Vector2(194, 172)
+texture = ExtResource("8_5kxpc")
+
+[node name="x" type="Sprite2D" parent="."]
+position = Vector2(34, 177)
+texture = ExtResource("9_goadb")
+
+[node name="y" type="Sprite2D" parent="."]
+position = Vector2(124, 119)
+texture = ExtResource("10_ihdnv")
+
+[node name="happy" type="Node2D" parent="."]
+visible = false
+
+[node name="gleep-glorp" type="Sprite2D" parent="happy"]
+modulate = Color(0, 1, 0, 1)
+position = Vector2(296, 89)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_tpk7p")
+
+[node name="frame-1" type="Node2D" parent="happy"]
+
+[node name="heart-1" type="Sprite2D" parent="happy/frame-1"]
+position = Vector2(279, 50.999992)
+rotation = -0.6614798
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("13_5kxpc")
+
+[node name="heart-2" type="Sprite2D" parent="happy/frame-1"]
+position = Vector2(310, 34)
+texture = ExtResource("13_5kxpc")
+
+[node name="heart-3" type="Sprite2D" parent="happy/frame-1"]
+position = Vector2(330, 36.000008)
+rotation = 0.82728606
+texture = ExtResource("13_5kxpc")
+
+[node name="heart-4" type="Sprite2D" parent="happy/frame-1"]
+position = Vector2(243, 91)
+rotation = -1.2409291
+texture = ExtResource("13_5kxpc")
+
+[node name="heart-5" type="Sprite2D" parent="happy/frame-1"]
+position = Vector2(336, 101)
+rotation = 0.8255408
+texture = ExtResource("13_5kxpc")
+
+[node name="frame-2" type="Node2D" parent="happy"]
+visible = false
+
+[node name="heart-1" type="Sprite2D" parent="happy/frame-2"]
+position = Vector2(335, 77.999985)
+rotation = 0.28099802
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("13_5kxpc")
+
+[node name="heart-2" type="Sprite2D" parent="happy/frame-2"]
+position = Vector2(314, 34)
+rotation = -0.5794493
+texture = ExtResource("13_5kxpc")
+
+[node name="heart-3" type="Sprite2D" parent="happy/frame-2"]
+position = Vector2(266, 67.99999)
+rotation = 0.6614798
+texture = ExtResource("13_5kxpc")
+
+[node name="heart-4" type="Sprite2D" parent="happy/frame-2"]
+position = Vector2(238, 105)
+rotation = 0.74351025
+texture = ExtResource("13_5kxpc")
+
+[node name="heart-5" type="Sprite2D" parent="happy/frame-2"]
+position = Vector2(326, 117)
+rotation = 0.24609143
+texture = ExtResource("13_5kxpc")
+
+[node name="angy" type="Node2D" parent="."]
+visible = false
+
+[node name="gleep-glorp-angy" type="Sprite2D" parent="angy"]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(296, 89)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_tpk7p")
+
+[node name="frame-1" type="Node2D" parent="angy"]
+position = Vector2(89, 126)
+
+[node name="squiggle" type="Sprite2D" parent="angy/frame-1"]
+position = Vector2(239, -100)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_ihdnv")
+
+[node name="frame-2" type="Node2D" parent="angy"]
+visible = false
+position = Vector2(178, 252)
+
+[node name="squiggle" type="Sprite2D" parent="angy/frame-2"]
+position = Vector2(150, -226)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("15_gd5rw")
