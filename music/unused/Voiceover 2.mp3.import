@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dyy6hd08s8j3q"
+path="res://.godot/imported/Voiceover 2.mp3-c7a6b61084d3dd145675ec4051666697.mp3str"
+
+[deps]
+
+source_file="res://music/unused/Voiceover 2.mp3"
+dest_files=["res://.godot/imported/Voiceover 2.mp3-c7a6b61084d3dd145675ec4051666697.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
