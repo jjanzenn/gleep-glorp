@@ -48,15 +48,6 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	print("waiter waiter one more game please")
 	
 	if anim_name == "win" or anim_name == "lose":
-<<<<<<< Updated upstream
-		var new_game_index = game_indices.pick_random()
-		while game_index == new_game_index:
-			new_game_index = game_indices.pick_random()
-		game_index = new_game_index
-		
-		$Microgame.add_child(childhood_games[game_index].instantiate())
-		$timer/AnimationPlayer.play("timer")
-=======
 		if score == 1:
 			get_tree().root.add_child(preload("res://loading/to_adolescent_evolution.tscn").instantiate())
 			queue_free()
@@ -68,4 +59,3 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 			
 			$Microgame.add_child(childhood_games[game_index].instantiate())
 			$timer/AnimationPlayer.play("timer")
->>>>>>> Stashed changes
