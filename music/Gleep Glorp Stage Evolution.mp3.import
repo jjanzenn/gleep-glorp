@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dcjhb4rmmtb1m"
+path="res://.godot/imported/Gleep Glorp Stage Evolution.mp3-95483bc35c2375e4d8bdadf46db0b891.mp3str"
+
+[deps]
+
+source_file="res://music/Gleep Glorp Stage Evolution.mp3"
+dest_files=["res://.godot/imported/Gleep Glorp Stage Evolution.mp3-95483bc35c2375e4d8bdadf46db0b891.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

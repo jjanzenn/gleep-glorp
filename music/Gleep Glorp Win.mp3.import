@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d3sqtn8twj6iy"
+path="res://.godot/imported/Gleep Glorp Win.mp3-7ea619ae8d50f228ed12af89fa794a30.mp3str"
+
+[deps]
+
+source_file="res://music/Gleep Glorp Win.mp3"
+dest_files=["res://.godot/imported/Gleep Glorp Win.mp3-7ea619ae8d50f228ed12af89fa794a30.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
