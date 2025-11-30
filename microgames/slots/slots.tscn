@@ -1,0 +1,84 @@
+[gd_scene load_steps=8 format=3 uid="uid://cs8h1fpy85yc2"]
+
+[ext_resource type="Script" uid="uid://c5tfuxryh67ef" path="res://microgames/slots/slots.gd" id="1_ciiy7"]
+[ext_resource type="Texture2D" uid="uid://7hej6ec7nu6b" path="res://microgames/slots/slots.png" id="1_crlgu"]
+[ext_resource type="Texture2D" uid="uid://duavanggfxcuc" path="res://microgames/slots/slot-paw.png" id="2_ciiy7"]
+[ext_resource type="Texture2D" uid="uid://bwooa2qwwern5" path="res://microgames/slots/slot-transition.png" id="3_pl6wl"]
+[ext_resource type="Texture2D" uid="uid://brkku7iygw78a" path="res://microgames/slots/heart-slot.png" id="4_6es6r"]
+[ext_resource type="Texture2D" uid="uid://di0yqnt7uhwwd" path="res://microgames/slots/ufo-slot.png" id="5_8w7ba"]
+[ext_resource type="Texture2D" uid="uid://bf3apd32x2vj7" path="res://microgames/slots/gleep-slot.png" id="6_odugb"]
+
+[node name="root" type="Node2D"]
+script = ExtResource("1_ciiy7")
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(128, 96)
+texture = ExtResource("1_crlgu")
+
+[node name="paw" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(128, 96)
+texture = ExtResource("2_ciiy7")
+
+[node name="slot-1" type="Node2D" parent="."]
+
+[node name="transition" type="Sprite2D" parent="slot-1"]
+position = Vector2(105, 54)
+texture = ExtResource("3_pl6wl")
+
+[node name="heart" type="Sprite2D" parent="slot-1"]
+visible = false
+position = Vector2(107, 54)
+texture = ExtResource("4_6es6r")
+
+[node name="ufo" type="Sprite2D" parent="slot-1"]
+visible = false
+position = Vector2(105, 55)
+texture = ExtResource("5_8w7ba")
+
+[node name="gleep" type="Sprite2D" parent="slot-1"]
+visible = false
+position = Vector2(106, 54)
+texture = ExtResource("6_odugb")
+
+[node name="slot-2" type="Node2D" parent="."]
+
+[node name="transition" type="Sprite2D" parent="slot-2"]
+position = Vector2(146, 66)
+texture = ExtResource("3_pl6wl")
+
+[node name="heart" type="Sprite2D" parent="slot-2"]
+visible = false
+position = Vector2(148, 67)
+texture = ExtResource("4_6es6r")
+
+[node name="ufo" type="Sprite2D" parent="slot-2"]
+visible = false
+position = Vector2(145, 67)
+texture = ExtResource("5_8w7ba")
+
+[node name="gleep" type="Sprite2D" parent="slot-2"]
+visible = false
+position = Vector2(146, 67)
+texture = ExtResource("6_odugb")
+
+[node name="slot-3" type="Node2D" parent="."]
+
+[node name="transition" type="Sprite2D" parent="slot-3"]
+position = Vector2(188, 78)
+texture = ExtResource("3_pl6wl")
+
+[node name="heart" type="Sprite2D" parent="slot-3"]
+visible = false
+position = Vector2(189, 79)
+texture = ExtResource("4_6es6r")
+
+[node name="ufo" type="Sprite2D" parent="slot-3"]
+visible = false
+position = Vector2(187, 82)
+texture = ExtResource("5_8w7ba")
+
+[node name="gleep" type="Sprite2D" parent="slot-3"]
+visible = false
+position = Vector2(188, 80)
+texture = ExtResource("6_odugb")
