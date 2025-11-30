@@ -1,30 +1,30 @@
-[gd_scene load_steps=29 format=3 uid="uid://djwft0gtmmc"]
+[gd_scene load_steps=29 format=3 uid="uid://gmpwari7t5ph"]
 
-[ext_resource type="Script" uid="uid://bjco6eaif743y" path="res://border/border.gd" id="1_4ddp2"]
-[ext_resource type="PackedScene" uid="uid://c175o6po8gcu2" path="res://microgames/petting/petting.tscn" id="2_4q5v0"]
-[ext_resource type="Texture2D" uid="uid://db05brxcxq0ef" path="res://border/childhood_border_neutral1.png" id="2_t8cbv"]
-[ext_resource type="Texture2D" uid="uid://b1346llyr2yqk" path="res://border/childhood_border_neutral2.png" id="3_5qc61"]
-[ext_resource type="Texture2D" uid="uid://cticudn48fqk2" path="res://border/childhood_border_angry1.png" id="4_e051e"]
-[ext_resource type="Texture2D" uid="uid://dgb8c1bmjcobu" path="res://border/childhood_border_happy1.png" id="4_n6usr"]
-[ext_resource type="Texture2D" uid="uid://dfnp7l0s6ihc4" path="res://border/yoofo1.png" id="4_rqwb3"]
-[ext_resource type="Texture2D" uid="uid://bo7ps0rmftp8m" path="res://border/yoofo2.png" id="5_6dhu7"]
-[ext_resource type="Texture2D" uid="uid://bok71i87ekuar" path="res://border/childhood_border_angry2.png" id="5_qgm46"]
-[ext_resource type="Texture2D" uid="uid://dc33hlftq5mwn" path="res://border/childhood_border_happy2.png" id="5_texef"]
-[ext_resource type="Texture2D" uid="uid://cird3ou5ywcl0" path="res://border/yoofo3.png" id="6_enkjd"]
-[ext_resource type="Texture2D" uid="uid://be56jjgcf263g" path="res://border/explod1.png" id="7_u3x0q"]
-[ext_resource type="Texture2D" uid="uid://cj8jo4bamusp4" path="res://border/explod2.png" id="8_4ddp2"]
-[ext_resource type="PackedScene" uid="uid://cqm7aajykbg28" path="res://border/life.tscn" id="10_t8cbv"]
-[ext_resource type="FontFile" uid="uid://bideg67mphojc" path="res://earthbound-menu-extended/earthbound-menu-extended.ttf" id="11_t8cbv"]
-[ext_resource type="AudioStream" uid="uid://cefpbit72wpva" path="res://music/Gleep Glorp Child Theme FINAL.mp3" id="16_qgm46"]
+[ext_resource type="Script" uid="uid://bjco6eaif743y" path="res://border/border.gd" id="1_dua8v"]
+[ext_resource type="Texture2D" uid="uid://db05brxcxq0ef" path="res://border/childhood_border_neutral1.png" id="2_ppp4o"]
+[ext_resource type="Texture2D" uid="uid://b1346llyr2yqk" path="res://border/childhood_border_neutral2.png" id="3_khey5"]
+[ext_resource type="Texture2D" uid="uid://cticudn48fqk2" path="res://border/childhood_border_angry1.png" id="4_v5r5e"]
+[ext_resource type="Texture2D" uid="uid://bok71i87ekuar" path="res://border/childhood_border_angry2.png" id="5_x6uat"]
+[ext_resource type="Texture2D" uid="uid://dgb8c1bmjcobu" path="res://border/childhood_border_happy1.png" id="6_0kyss"]
+[ext_resource type="Texture2D" uid="uid://dc33hlftq5mwn" path="res://border/childhood_border_happy2.png" id="7_8lwnw"]
+[ext_resource type="PackedScene" uid="uid://c175o6po8gcu2" path="res://microgames/petting/petting.tscn" id="8_kgb1k"]
+[ext_resource type="Texture2D" uid="uid://dfnp7l0s6ihc4" path="res://border/yoofo1.png" id="9_2a7ac"]
+[ext_resource type="Texture2D" uid="uid://bo7ps0rmftp8m" path="res://border/yoofo2.png" id="10_lyq4i"]
+[ext_resource type="Texture2D" uid="uid://cird3ou5ywcl0" path="res://border/yoofo3.png" id="11_beml3"]
+[ext_resource type="Texture2D" uid="uid://be56jjgcf263g" path="res://border/explod1.png" id="12_od7vm"]
+[ext_resource type="Texture2D" uid="uid://cj8jo4bamusp4" path="res://border/explod2.png" id="13_hsnih"]
+[ext_resource type="PackedScene" uid="uid://cqm7aajykbg28" path="res://border/life.tscn" id="14_kiwii"]
+[ext_resource type="FontFile" uid="uid://bideg67mphojc" path="res://earthbound-menu-extended/earthbound-menu-extended.ttf" id="15_65716"]
+[ext_resource type="AudioStream" uid="uid://cefpbit72wpva" path="res://music/Gleep Glorp Child Theme FINAL.mp3" id="16_ajiv5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_n6usr"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_t8cbv")
+"texture": ExtResource("2_ppp4o")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_5qc61")
+"texture": ExtResource("3_khey5")
 }],
 "loop": true,
 "name": &"default",
@@ -32,10 +32,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_e051e")
+"texture": ExtResource("4_v5r5e")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_qgm46")
+"texture": ExtResource("5_x6uat")
 }],
 "loop": true,
 "name": &"lose",
@@ -43,10 +43,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_n6usr")
+"texture": ExtResource("6_0kyss")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_texef")
+"texture": ExtResource("7_8lwnw")
 }],
 "loop": true,
 "name": &"win",
@@ -57,10 +57,10 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_rqwb3")
+"texture": ExtResource("9_2a7ac")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_6dhu7")
+"texture": ExtResource("10_lyq4i")
 }],
 "loop": true,
 "name": &"default",
@@ -181,10 +181,10 @@ _data = {
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("7_u3x0q")
+"texture": ExtResource("12_od7vm")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_4ddp2")
+"texture": ExtResource("13_hsnih")
 }],
 "loop": true,
 "name": &"default",
@@ -192,7 +192,7 @@ animations = [{
 }]
 
 [sub_resource type="LabelSettings" id="LabelSettings_5qc61"]
-font = ExtResource("11_t8cbv")
+font = ExtResource("15_65716")
 font_size = 11
 font_color = Color(0, 0, 0, 1)
 
@@ -258,7 +258,7 @@ _data = {
 
 [node name="Border" type="Node2D"]
 texture_filter = 1
-script = ExtResource("1_4ddp2")
+script = ExtResource("1_dua8v")
 
 [node name="Border" type="AnimatedSprite2D" parent="."]
 position = Vector2(173, 130)
@@ -269,7 +269,7 @@ autoplay = "default"
 [node name="Microgame" type="Node2D" parent="."]
 position = Vector2(45, 34)
 
-[node name="root" parent="Microgame" instance=ExtResource("2_4q5v0")]
+[node name="root" parent="Microgame" instance=ExtResource("8_kgb1k")]
 
 [node name="timer" type="Node2D" parent="."]
 
@@ -283,7 +283,7 @@ frame_progress = 0.7143913
 
 [node name="stationary_yufo" type="Sprite2D" parent="timer"]
 position = Vector2(45, 242)
-texture = ExtResource("6_enkjd")
+texture = ExtResource("11_beml3")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="timer"]
 libraries = {
@@ -300,15 +300,15 @@ frame_progress = 0.55905145
 [node name="Lives" type="Node2D" parent="."]
 position = Vector2(39, 0)
 
-[node name="Life 1" parent="Lives" instance=ExtResource("10_t8cbv")]
+[node name="Life 1" parent="Lives" instance=ExtResource("14_kiwii")]
 
-[node name="Life 2" parent="Lives" instance=ExtResource("10_t8cbv")]
+[node name="Life 2" parent="Lives" instance=ExtResource("14_kiwii")]
 position = Vector2(37, 0)
 
-[node name="Life 3" parent="Lives" instance=ExtResource("10_t8cbv")]
+[node name="Life 3" parent="Lives" instance=ExtResource("14_kiwii")]
 position = Vector2(74, 0)
 
-[node name="Life 4" parent="Lives" instance=ExtResource("10_t8cbv")]
+[node name="Life 4" parent="Lives" instance=ExtResource("14_kiwii")]
 position = Vector2(112, 0)
 
 [node name="Score" type="Label" parent="."]
@@ -327,7 +327,7 @@ libraries = {
 }
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("16_qgm46")
+stream = ExtResource("16_ajiv5")
 autoplay = true
 
 [connection signal="animation_finished" from="timer/AnimationPlayer" to="." method="_on_timer_animation_finished"]
