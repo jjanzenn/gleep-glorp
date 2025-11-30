@@ -1,15 +1,56 @@
-[gd_scene load_steps=21 format=3 uid="uid://djwft0gtmmc"]
+[gd_scene load_steps=28 format=3 uid="uid://djwft0gtmmc"]
 
 [ext_resource type="Script" uid="uid://bjco6eaif743y" path="res://border/border.gd" id="1_4ddp2"]
-[ext_resource type="Texture2D" uid="uid://c38ygy8h7o5s3" path="res://border/border.png" id="1_pvew4"]
 [ext_resource type="PackedScene" uid="uid://c175o6po8gcu2" path="res://microgames/petting/petting.tscn" id="2_4q5v0"]
+[ext_resource type="Texture2D" uid="uid://db05brxcxq0ef" path="res://border/childhood_border_neutral1.png" id="2_t8cbv"]
+[ext_resource type="Texture2D" uid="uid://b1346llyr2yqk" path="res://border/childhood_border_neutral2.png" id="3_5qc61"]
+[ext_resource type="Texture2D" uid="uid://cticudn48fqk2" path="res://border/childhood_border_angry1.png" id="4_e051e"]
+[ext_resource type="Texture2D" uid="uid://dgb8c1bmjcobu" path="res://border/childhood_border_happy1.png" id="4_n6usr"]
 [ext_resource type="Texture2D" uid="uid://dfnp7l0s6ihc4" path="res://border/yoofo1.png" id="4_rqwb3"]
 [ext_resource type="Texture2D" uid="uid://bo7ps0rmftp8m" path="res://border/yoofo2.png" id="5_6dhu7"]
+[ext_resource type="Texture2D" uid="uid://bok71i87ekuar" path="res://border/childhood_border_angry2.png" id="5_qgm46"]
+[ext_resource type="Texture2D" uid="uid://dc33hlftq5mwn" path="res://border/childhood_border_happy2.png" id="5_texef"]
 [ext_resource type="Texture2D" uid="uid://cird3ou5ywcl0" path="res://border/yoofo3.png" id="6_enkjd"]
 [ext_resource type="Texture2D" uid="uid://be56jjgcf263g" path="res://border/explod1.png" id="7_u3x0q"]
 [ext_resource type="Texture2D" uid="uid://cj8jo4bamusp4" path="res://border/explod2.png" id="8_4ddp2"]
 [ext_resource type="PackedScene" uid="uid://cqm7aajykbg28" path="res://border/life.tscn" id="10_t8cbv"]
 [ext_resource type="FontFile" uid="uid://bideg67mphojc" path="res://earthbound-menu-extended/earthbound-menu-extended.ttf" id="11_t8cbv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n6usr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_t8cbv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5qc61")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_e051e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_qgm46")
+}],
+"loop": true,
+"name": &"lose",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_n6usr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_texef")
+}],
+"loop": true,
+"name": &"win",
+"speed": 5.0
+}]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8e5xc"]
 animations = [{
@@ -159,12 +200,56 @@ resource_name = "game_over"
 
 [sub_resource type="Animation" id="Animation_texef"]
 resource_name = "lose"
+length = 2.5
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Border:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"lose", &"default"]
+}
 
 [sub_resource type="Animation" id="Animation_n6usr"]
 resource_name = "win"
+length = 2.5
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Border:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"win", &"default"]
+}
+
+[sub_resource type="Animation" id="Animation_qgm46"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Border:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"win"]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_texef"]
 _data = {
+&"RESET": SubResource("Animation_qgm46"),
 &"game_over": SubResource("Animation_e051e"),
 &"lose": SubResource("Animation_texef"),
 &"win": SubResource("Animation_n6usr")
@@ -174,9 +259,11 @@ _data = {
 texture_filter = 1
 script = ExtResource("1_4ddp2")
 
-[node name="Border" type="Sprite2D" parent="."]
+[node name="Border" type="AnimatedSprite2D" parent="."]
 position = Vector2(173, 130)
-texture = ExtResource("1_pvew4")
+sprite_frames = SubResource("SpriteFrames_n6usr")
+animation = &"win"
+autoplay = "default"
 
 [node name="Microgame" type="Node2D" parent="."]
 position = Vector2(45, 34)
