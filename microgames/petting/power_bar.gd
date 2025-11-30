@@ -2,12 +2,13 @@ extends Microgame
 
 var frame_time = 0.2
 
-var direction = 0
-var state = 0
+var direction = 1
+var state = 1
 var time_total = 0
 var done = false
 var really_done = false
-var running = false
+var running = true
+var accepting_input = false
 
 var animation_frame_time = 0.15
 
@@ -17,16 +18,15 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Input.is_action_pressed("action") and !running:
-		running = true
-		direction = 1
-		state = 1
-	elif Input.is_action_just_released("action"):
-		done = true
-		if state == 4:
-			won = true
-		else:
-			won = false
+	if accepting_input:
+		if Input.is_action_just_released("action"):
+			done = true
+			if state == 4:
+				won = true
+			else:
+				won = false
+	if !Input.is_action_pressed("action"):
+		accepting_input = true
 		
 	if state == 0:
 		$"power-bar/stage-0".visible = true
