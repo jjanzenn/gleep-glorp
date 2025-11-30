@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c38ygy8h7o5s3"
-path="res://.godot/imported/border.png-02f027780b0d0499d448fad414b6b3a4.ctex"
+uid="uid://bx5cio2vdlphs"
+path="res://.godot/imported/blackjack-background.png-2ef0ef350bdc713835504efeeb74b5e2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://border/border.png"
-dest_files=["res://.godot/imported/border.png-02f027780b0d0499d448fad414b6b3a4.ctex"]
+source_file="res://microgames/blackjack/blackjack-background.png"
+dest_files=["res://.godot/imported/blackjack-background.png-2ef0ef350bdc713835504efeeb74b5e2.ctex"]
 
 [params]
 
