@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cs8h1fpy85yc2"]
+[gd_scene load_steps=13 format=3 uid="uid://cs8h1fpy85yc2"]
 
 [ext_resource type="Script" uid="uid://c5tfuxryh67ef" path="res://microgames/slots/slots.gd" id="1_ciiy7"]
 [ext_resource type="Texture2D" uid="uid://7hej6ec7nu6b" path="res://microgames/slots/slots.png" id="1_crlgu"]
@@ -7,6 +7,25 @@
 [ext_resource type="Texture2D" uid="uid://brkku7iygw78a" path="res://microgames/slots/heart-slot.png" id="4_6es6r"]
 [ext_resource type="Texture2D" uid="uid://di0yqnt7uhwwd" path="res://microgames/slots/ufo-slot.png" id="5_8w7ba"]
 [ext_resource type="Texture2D" uid="uid://bf3apd32x2vj7" path="res://microgames/slots/gleep-slot.png" id="6_odugb"]
+[ext_resource type="Texture2D" uid="uid://bs55acvyn74sy" path="res://microgames/blackjack/text-bubble.png" id="8_6es6r"]
+[ext_resource type="FontFile" uid="uid://bideg67mphojc" path="res://earthbound-menu-extended/earthbound-menu-extended.ttf" id="9_8w7ba"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_odugb"]
+line_spacing = -2.0
+font = ExtResource("9_8w7ba")
+font_size = 11
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_bxfk1"]
+line_spacing = -2.0
+font = ExtResource("9_8w7ba")
+font_size = 11
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_agv11"]
+font = ExtResource("9_8w7ba")
+font_size = 11
+font_color = Color(0.1992102, 0.42818514, 1, 1)
 
 [node name="root" type="Node2D"]
 script = ExtResource("1_ciiy7")
@@ -82,3 +101,37 @@ texture = ExtResource("5_8w7ba")
 visible = false
 position = Vector2(188, 80)
 texture = ExtResource("6_odugb")
+
+[node name="text-bubble" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(38, 27)
+texture = ExtResource("8_6es6r")
+
+[node name="win-text" type="Label" parent="text-bubble"]
+visible = false
+offset_left = -15.0
+offset_top = -15.0
+offset_right = 27.0
+offset_bottom = 15.0
+text = "you win...
+this time"
+label_settings = SubResource("LabelSettings_odugb")
+
+[node name="lose-text" type="Label" parent="text-bubble"]
+visible = false
+offset_left = -17.0
+offset_top = -20.0
+offset_right = 100.0
+offset_bottom = 24.0
+text = "The house
+always wins
+>:3"
+label_settings = SubResource("LabelSettings_bxfk1")
+
+[node name="Label" type="Label" parent="text-bubble/lose-text"]
+layout_mode = 0
+offset_left = 19.0
+offset_right = 59.0
+offset_bottom = 23.0
+text = "house"
+label_settings = SubResource("LabelSettings_agv11")

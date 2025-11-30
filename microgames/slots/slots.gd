@@ -61,10 +61,13 @@ func _process(delta: float) -> void:
 				set_icon(s2, $"slot-2")
 				done_2 = true
 			else:
+				$"text-bubble".visible = true
 				if will_win:
+					$"text-bubble/win-text".visible = true
 					s3 = s1
 				else:
 					s3 = (s1 + 2) % 6
+					$"text-bubble/lose-text".visible = true
 				set_icon(s3, $"slot-3")
 				done_3 = true
 
