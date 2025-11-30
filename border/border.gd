@@ -3,13 +3,13 @@ extends Node2D
 var lives: int = 4
 var score: int = 0
 var childhood_games = []
-var game_indices = [0, 1, 2, 3]
+var game_indices = [0, 1, 2]
 var game_index = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	childhood_games.append(preload("res://microgames/petting/petting.tscn"))
-	childhood_games.append(preload("res://microgames/feeding/feeding.tscn"))
+	#childhood_games.append(preload("res://microgames/feeding/feeding.tscn"))
 	childhood_games.append(preload("res://microgames/fishing/root.tscn"))
 	childhood_games.append(preload("res://microgames/scrub/scrub.tscn"))
 

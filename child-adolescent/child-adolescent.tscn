@@ -1,11 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://bu3p6aoytd8gw"]
+[gd_scene load_steps=7 format=3 uid="uid://bu3p6aoytd8gw"]
 
 [ext_resource type="Texture2D" uid="uid://c8w2h7xqvu4gh" path="res://gimp-projects/adolescent.png" id="1_llx7n"]
 [ext_resource type="Script" uid="uid://bseprb8kaxxbg" path="res://child-adolescent/child_adolescent.gd" id="1_uxlpy"]
 [ext_resource type="Texture2D" uid="uid://clr8esityk8x7" path="res://gimp-projects/adolescent-smoke-1.png" id="2_qdkwp"]
 [ext_resource type="Texture2D" uid="uid://bwf0mv34dsp00" path="res://gimp-projects/adolescent-smoke-2.png" id="3_rxgly"]
+[ext_resource type="Texture2D" uid="uid://dn0trkm7ts5hn" path="res://gimp-projects/babie-1.png" id="5_q2m4c"]
+[ext_resource type="Texture2D" uid="uid://i4vmt7yt31s8" path="res://gimp-projects/babie-2.png" id="6_k526u"]
 
-[node name="root" type="Node2D"]
+[node name="root2" type="Node2D"]
 script = ExtResource("1_uxlpy")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -14,6 +16,7 @@ offset_bottom = 260.0
 color = Color(0, 0, 0, 1)
 
 [node name="adolescent" type="Node2D" parent="."]
+visible = false
 
 [node name="adolescent-0" type="Sprite2D" parent="adolescent"]
 position = Vector2(173, 130)
@@ -28,3 +31,14 @@ texture = ExtResource("2_qdkwp")
 visible = false
 position = Vector2(173, 130)
 texture = ExtResource("3_rxgly")
+
+[node name="child" type="Node2D" parent="."]
+
+[node name="child-0" type="Sprite2D" parent="child"]
+position = Vector2(173, 130)
+texture = ExtResource("5_q2m4c")
+
+[node name="child-1" type="Sprite2D" parent="child"]
+visible = false
+position = Vector2(173, 130)
+texture = ExtResource("6_k526u")

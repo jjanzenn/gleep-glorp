@@ -10,8 +10,6 @@ var super_frame_time = 0.5
 var super_elapsed = 0
 var super_frame = 0
 
-var super_duper_elapsed = 0
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -21,16 +19,14 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	elapsed += delta
 	super_elapsed += delta
-	super_duper_elapsed += delta
 	if elapsed > frame_time:
 		frame = (frame + 1) % 3
-		child_frame = (child_frame + 1) % 3
 		elapsed = 0
 		
 	if super_elapsed > super_frame_time:
 		super_frame = (super_frame + 1) % 2
 		$adolescent.visible = not $adolescent.visible
-		$child.visible = not $child.visible
+		$adult.visible = not $adult.visible
 		super_elapsed = 0 
 	
 	if frame == 0:
@@ -45,15 +41,3 @@ func _process(delta: float) -> void:
 		$"adolescent/adolescent-0".visible = false
 		$"adolescent/adolescent-1".visible = false
 		$"adolescent/adolescent-2".visible = true
-		
-	if child_frame == 0:
-		$"child/child-0".visible = true
-		$"child/child-1".visible = false
-	elif child_frame == 1:
-		$"child/child-0".visible = false
-		$"child/child-1".visible = true
-	
-		
-	if super_duper_elapsed > 3:
-		get_tree().root.add_child(preload("res://loading/from_adolescent_evolution.tscn").instantiate())
-		queue_free()
