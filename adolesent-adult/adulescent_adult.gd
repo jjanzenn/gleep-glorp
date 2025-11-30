@@ -21,13 +21,12 @@ func _process(delta: float) -> void:
 	super_elapsed += delta
 	if elapsed > frame_time:
 		frame = (frame + 1) % 3
-		child_frame = (child_frame + 1) % 3
 		elapsed = 0
 		
 	if super_elapsed > super_frame_time:
 		super_frame = (super_frame + 1) % 2
 		$adolescent.visible = not $adolescent.visible
-		$child.visible = not $child.visible
+		$adult.visible = not $adult.visible
 		super_elapsed = 0 
 	
 	if frame == 0:
@@ -42,10 +41,3 @@ func _process(delta: float) -> void:
 		$"adolescent/adolescent-0".visible = false
 		$"adolescent/adolescent-1".visible = false
 		$"adolescent/adolescent-2".visible = true
-		
-	if child_frame == 0:
-		$"child/child-0".visible = true
-		$"child/child-1".visible = false
-	elif child_frame == 1:
-		$"child/child-0".visible = false
-		$"child/child-1".visible = true

@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://ce1yjb0j1i7x0"]
+
+[ext_resource type="Script" uid="uid://chg3tljiafkih" path="res://adolesent-adult/adulescent_adult.gd" id="1_5iw86"]
+[ext_resource type="Texture2D" uid="uid://c8w2h7xqvu4gh" path="res://gimp-projects/adolescent.png" id="1_q76tp"]
+[ext_resource type="Texture2D" uid="uid://clr8esityk8x7" path="res://gimp-projects/adolescent-smoke-1.png" id="2_4kho7"]
+[ext_resource type="Texture2D" uid="uid://bwf0mv34dsp00" path="res://gimp-projects/adolescent-smoke-2.png" id="3_5iw86"]
+[ext_resource type="Texture2D" uid="uid://dmc3l4mhmkxla" path="res://gimp-projects/adult.png" id="4_4kho7"]
+
+[node name="root" type="Node2D"]
+script = ExtResource("1_5iw86")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 346.0
+offset_bottom = 260.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="adolescent" type="Node2D" parent="."]
+
+[node name="adolescent-0" type="Sprite2D" parent="adolescent"]
+position = Vector2(173, 130)
+texture = ExtResource("1_q76tp")
+
+[node name="adolescent-1" type="Sprite2D" parent="adolescent"]
+visible = false
+position = Vector2(173, 130)
+texture = ExtResource("2_4kho7")
+
+[node name="adolescent-2" type="Sprite2D" parent="adolescent"]
+visible = false
+position = Vector2(173, 130)
+texture = ExtResource("3_5iw86")
+
+[node name="adult" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(174, 130)
+texture = ExtResource("4_4kho7")
