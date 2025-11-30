@@ -1,0 +1,217 @@
+[gd_scene load_steps=14 format=3 uid="uid://cftdj2d68yc7x"]
+
+[ext_resource type="Script" uid="uid://b3j6ccwviffwy" path="res://microgames/dating-sim/dating_sim.gd" id="1_exhpp"]
+[ext_resource type="Texture2D" uid="uid://bxaw6vh7bbc4w" path="res://microgames/dating-sim/homophobic-dog.png" id="1_k3r2t"]
+[ext_resource type="FontFile" uid="uid://bideg67mphojc" path="res://earthbound-menu-extended/earthbound-menu-extended.ttf" id="2_jlud7"]
+[ext_resource type="Texture2D" uid="uid://dyrpvep27iom5" path="res://microgames/homework-easy/button-a.png" id="3_jlud7"]
+[ext_resource type="Texture2D" uid="uid://bkn236jy8lnsh" path="res://microgames/homework-easy/button-b.png" id="4_g5lul"]
+[ext_resource type="Texture2D" uid="uid://ck6iyjeaaqfr" path="res://microgames/homework-easy/button-x.png" id="5_5tdfw"]
+[ext_resource type="Texture2D" uid="uid://b3gkladq2ag1q" path="res://microgames/homework-easy/button-y.png" id="6_k0pkf"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_g5lul"]
+line_spacing = -5.0
+font = ExtResource("2_jlud7")
+font_size = 11
+
+[sub_resource type="LabelSettings" id="LabelSettings_5tdfw"]
+line_spacing = -13.0
+font = ExtResource("2_jlud7")
+font_size = 22
+
+[sub_resource type="LabelSettings" id="LabelSettings_k0pkf"]
+font = ExtResource("2_jlud7")
+font_size = 22
+
+[sub_resource type="LabelSettings" id="LabelSettings_exhpp"]
+font = ExtResource("2_jlud7")
+font_size = 22
+
+[sub_resource type="LabelSettings" id="LabelSettings_reeqs"]
+font = ExtResource("2_jlud7")
+font_size = 22
+
+[sub_resource type="LabelSettings" id="LabelSettings_v1n3l"]
+font = ExtResource("2_jlud7")
+font_size = 22
+
+[node name="root" type="Node2D"]
+script = ExtResource("1_exhpp")
+
+[node name="background" type="ColorRect" parent="."]
+offset_right = 256.0
+offset_bottom = 192.0
+color = Color(0, 0, 0, 1)
+
+[node name="phone-screen" type="ColorRect" parent="."]
+offset_left = 16.0
+offset_top = 13.0
+offset_right = 105.0
+offset_bottom = 137.0
+
+[node name="message-1" type="ColorRect" parent="phone-screen"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 6.0
+offset_right = 87.0
+offset_bottom = 30.0
+color = Color(0.6666667, 0.6666667, 0.6666667, 1)
+
+[node name="Label" type="Label" parent="phone-screen/message-1"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 56.0
+offset_bottom = 26.0
+text = "gleeble gloop"
+label_settings = SubResource("LabelSettings_g5lul")
+
+[node name="homophobic-dog" type="Sprite2D" parent="phone-screen/message-1"]
+position = Vector2(-13, 10)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_k3r2t")
+
+[node name="message-2" type="ColorRect" parent="phone-screen"]
+visible = false
+layout_mode = 0
+offset_left = 3.0
+offset_top = 36.0
+offset_right = 63.0
+offset_bottom = 60.0
+color = Color(0.6666667, 0.6666667, 0.6666667, 1)
+
+[node name="option-a" type="Label" parent="phone-screen/message-2"]
+visible = false
+layout_mode = 0
+offset_left = 1.0
+offset_top = -3.0
+offset_right = 90.0
+offset_bottom = 24.0
+text = "erm what the
+gleep?"
+label_settings = SubResource("LabelSettings_g5lul")
+
+[node name="option-b" type="Label" parent="phone-screen/message-2"]
+visible = false
+layout_mode = 0
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 91.0
+offset_bottom = 30.0
+text = "zooble doop
+"
+label_settings = SubResource("LabelSettings_g5lul")
+
+[node name="option-x" type="Label" parent="phone-screen/message-2"]
+visible = false
+layout_mode = 0
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 91.0
+offset_bottom = 30.0
+text = "eeby deeby"
+label_settings = SubResource("LabelSettings_g5lul")
+
+[node name="option-y" type="Label" parent="phone-screen/message-2"]
+visible = false
+layout_mode = 0
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 91.0
+offset_bottom = 30.0
+text = "gadzooks!"
+label_settings = SubResource("LabelSettings_g5lul")
+
+[node name="message-3" type="ColorRect" parent="phone-screen"]
+visible = false
+layout_mode = 0
+offset_left = 29.0
+offset_top = 65.0
+offset_right = 87.0
+offset_bottom = 89.0
+color = Color(0.6666667, 0.6666667, 0.6666667, 1)
+
+[node name="label-lose" type="Label" parent="phone-screen/message-3"]
+visible = false
+layout_mode = 0
+offset_left = 3.0
+offset_top = 2.0
+offset_right = 57.0
+offset_bottom = 25.0
+text = "i hate you"
+label_settings = SubResource("LabelSettings_g5lul")
+
+[node name="homophobic-dog" type="Sprite2D" parent="phone-screen/message-3"]
+position = Vector2(-15, 10)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_k3r2t")
+
+[node name="label-win" type="Label" parent="phone-screen/message-3"]
+visible = false
+layout_mode = 0
+offset_left = 3.0
+offset_top = 2.0
+offset_right = 57.0
+offset_bottom = 25.0
+text = "i love you"
+label_settings = SubResource("LabelSettings_g5lul")
+
+[node name="instructions" type="Label" parent="."]
+offset_left = 113.0
+offset_top = 1.0
+offset_right = 353.0
+offset_bottom = 90.0
+text = "How should your
+gleep glorp
+respond to their
+crush?"
+label_settings = SubResource("LabelSettings_5tdfw")
+
+[node name="options" type="Node2D" parent="."]
+
+[node name="option-a" type="Label" parent="options"]
+offset_left = 78.0
+offset_top = 161.0
+offset_right = 256.0
+offset_bottom = 193.0
+text = "erm what the gleep?"
+label_settings = SubResource("LabelSettings_k0pkf")
+
+[node name="a" type="Sprite2D" parent="options/option-a"]
+position = Vector2(-15, 17)
+texture = ExtResource("3_jlud7")
+
+[node name="option-b" type="Label" parent="options"]
+offset_left = 155.0
+offset_top = 138.0
+offset_right = 255.0
+offset_bottom = 170.0
+text = "zooble doop"
+label_settings = SubResource("LabelSettings_exhpp")
+
+[node name="b" type="Sprite2D" parent="options/option-b"]
+position = Vector2(-14, 18)
+texture = ExtResource("4_g5lul")
+
+[node name="option-x" type="Label" parent="options"]
+offset_left = 26.0
+offset_top = 136.0
+offset_right = 122.0
+offset_bottom = 168.0
+text = "eeby deepy"
+label_settings = SubResource("LabelSettings_reeqs")
+
+[node name="x" type="Sprite2D" parent="options/option-x"]
+position = Vector2(-13, 17)
+texture = ExtResource("5_5tdfw")
+
+[node name="option-y" type="Label" parent="options"]
+offset_left = 139.0
+offset_top = 111.0
+offset_right = 225.0
+offset_bottom = 143.0
+text = "gadzooks!"
+label_settings = SubResource("LabelSettings_v1n3l")
+
+[node name="y" type="Sprite2D" parent="options/option-y"]
+position = Vector2(-15, 20)
+texture = ExtResource("6_k0pkf")
